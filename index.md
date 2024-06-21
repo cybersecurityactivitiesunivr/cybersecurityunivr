@@ -2,7 +2,8 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+Le seguenti attivita' di laboratorio vi daranno l'opportunita' di conoscere diverse tecniche comunemente utilizzate dagli hacker.
+Breve descrizione di come funzionano gli attacchi con un'immagine 
 
 [Link to another page](./another-page.html).
 
