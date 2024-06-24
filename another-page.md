@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Another page
-description: This is just another page
+title: vulnerabilita'
+description: Sfruttamento di vulnerabilita'.
 ---
 
 ## Welcome to another page
