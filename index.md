@@ -3,15 +3,18 @@ layout: default
 ---
 
 Le seguenti attivita' di laboratorio vi daranno l'opportunita' di conoscere diverse tecniche comunemente utilizzate dagli hacker.
-Breve descrizione di come funzionano gli attacchi con un'immagine 
+Le tecniche che utilizzerete durante i laboratori sono sfruttamento di vulnerabilita', phishing e ottenimento di credenziali. Inoltre,
+conoscerete le tecniche per analizzare e riconoscere documenti e software malevoli.
+
+* [Sfruttamento di vulnerabilita'](./another-page.html).
 
 * [Attacchi ai sistemi di autenticazione basati su password](./another-page.html).
 
 * [Attacchi di ingegneria sociale](./another-page.html).
 
-* [Analisi di software malevolo](./another-page.html).
+* [Analisi di documenti e software malevolo](./another-page.html).
 
-* [Analisi di documenti malevoli](./another-page.html).
+* 
 
 
 There should be whitespace between paragraphs.
