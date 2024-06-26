@@ -99,6 +99,10 @@ Specificare l'url del sito web di phishing a cui redirigere le potenziali vittim
 
 Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
+## Creare un payload malevolo con msfvenom 
+
+**msfvenom** è uno strumento del framework Metasploit utilizzato per generare payload malevoli. Per creare un payload malevolo per Linux, seguiamo i seguenti passaggi:
+
 
 
 
