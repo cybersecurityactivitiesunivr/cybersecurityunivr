@@ -191,7 +191,7 @@ Cliccate su Save Page
 
 ### Creare template email di phishing 
 
-![image](gophish6.png)
+![image](gophish7.png)
 
 Cliccate su Email Templates per creare il template dell’email di phishing
 
@@ -205,7 +205,7 @@ Cliccate su Save Template
 
 ### Creare la lista delle potenziali vittime
 
-
+![image](gophish8.png)
 
 Cliccate su Users and Groups per definire la lista delle vittime a cui mandare l’email di phishing. Le singole vittime possono essere specificate singolarmente e aggiunte mediante il bottone Add oppure è possibile importare un file .cvs con la lista delle vittime
 
@@ -213,7 +213,7 @@ Cliccate su Save Changes
 
 ### Creare una nuova campagna di phishing 
 
-![image](gophish7.png)
+
 
 •Create una nuova campagna di phishing cliccando su Campaigns e specificate sotto Email Template, Landing Page, Sending Profile e Groups il nome di quelli che abbiamo creato nei passaggi precedenti.
 
