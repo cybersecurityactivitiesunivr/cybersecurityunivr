@@ -76,24 +76,26 @@ Dal terminale digitate i seguenti comandi:
 ```
 john --incremental sensitive.txt
 ```
-Per consentire di recuperare le altre password, eseguiremo un dictionary attack con il dizionario di John The Ripper che si trova sotto la cartella /usr/share/john/password.lst. Digitate il seguente comando:
+Per consentire di recuperare le altre password, eseguiremo un attacco a dizionario con il dizionario di John The Ripper che si trova sotto la cartella /usr/share/john/password.lst. Digitate il seguente comando:
 ```
 john --wordlist=/usr/share/john/password.lst sensitive.txt
 ```
 
-Ripetete il dictionary attack utilizzando i dizionari che si trovano nel file password.zip: cain.txt  facebook-pastebay.txt  hotmail.txt  myspace.txt.
+Ripetete l'attacco a dizionario utilizzando i dizionari che si trovano nel file password.zip: cain.txt  facebook-pastebay.txt  hotmail.txt  myspace.txt.
 
-## Dictionary attacks - Cracking 
-Eseguiremi una serie di dictionary attacks per scoprire le password presenti nei file passwd e shadow  che contengono gli username e gli hash delle password degli utenti che hanno accesso alla macchina Metasploitable2. 
-•	Per ottenere una copia dei file passwd e shadow dobbiamo ottenere una shell sulla macchina Metasploitable2 utilizzando la vulnerabilità presente in vsftp come abbiamo visto nel laboratorio su tecniche di reconnaissance e esploitation.
-•	Una volta ottenuta la shell utilizzate il comando cat /etc/passwd per visualizzare  il contenuto del file. Copiate il contenuto in un file di testo locale chiamato passwd.txt.
-•	Poi utilizzate il comando cat /etc/shadow per visualizzare  il contenuto del file. Copiate il contenuto in un file di testo locale chiamato shadow.txt.
-•	Da terminale digitate il seguente comando per combinare i due file passwd e shadow in un unico file passwords.txt
+## Attacco a dizionario - Craccare le password di Metasploitable2
+
+Eseguiremo una serie di attacchi a dizionario per scoprire le password presenti nei file passwd e shadow  che contengono gli username e gli hash delle password degli utenti che hanno accesso alla macchina Metasploitable2. 
+
+Da terminale digitate il seguente comando per combinare i due file passwd e shadow in un unico file passwords.txt.
+```
 unshadow passwd.txt shadow.txt > passwords.txt
-•	Eseguiremo una serie di dictionary attacks con i dizionari che si trovano sotto la cartella john: cain.txt  facebook-pastebay.txt  hotmail.txt  myspace.txt. Digitate il seguente comando
-john –wordlist=<dizionario sotto la cartella john> passwords.txt
-
-Quali password siete riusciti a recuperare?
+```
+Adesso eseguiamo una serie di attacchi a dizionario con i dizionari che si trovano nel file password.zip: cain.txt, facebook-pastebay.txt  hotmail.txt, e myspace.txt. Digitate il seguente comando:
+```
+john –wordlist=< path al dizionario > passwords.txt
+```
+_Quali password siete riusciti a recuperare?_
  
 
 # Attacchi online con  Hydra
