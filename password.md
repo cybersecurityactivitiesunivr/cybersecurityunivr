@@ -41,9 +41,9 @@ dove
 *	dictionary.txt è il dizionario che viene utilizzato per recuperare la password
  
 
-## Dictionary attack – Cracking MD5 password hashes 
+## Attacchi a Dizionario  – Craccare hash MD5
 
-Eseguiremo un dictionary attack per scoprire le password presenti nel file hashes.txt contenuto nella cartella **hashcat**. Il file contiene 9 MD5 hashes.
+Eseguiremo un attacco a dizionario per scoprire le password presenti nel file hashes.txt contenuto nella cartella password.zip. Il file contiene 9 MD5 hashes.
 
 Dal terminale digitate il seguente comando
 ```
@@ -59,16 +59,17 @@ Per applicare la regola alle parole contenute nel dizionario dictionary.txt eseg
 ```
 hashcat -m 0 -a 0 -r /usr/share/hashcat/rules/leetspeak.rule hashes.txt  dictionary.txt
 ```
-Per consentire di recuperare le altre password, eseguiremo un dictionary attack applicando una maschera che rappresenta il pattern dove l’utente aggiunge dei numeri alla fine della password quali per esempio john22 o john2022.
+Per consentire di recuperare le altre password, eseguiremo un attacco a dizionario applicando una maschera che rappresenta il pattern dove l’utente aggiunge dei numeri alla fine della password quali per esempio john22 o john2022.
 
 Per applicare la maschera alle parole contenute nel dizionario dictionary.txt eseguiamo il seguente comando:
 ```
 hashcat -m 0 -a 6 hashes.txt  dictionary.txt ?d?d?d?d
 ```
  
-## A –  John The Ripper
+## Attacchi a Forza Bruta e a Dizionario con John The Ripper
 
-Eseguiremo brute force e dictionary attacks per scoprire le password presenti nel file sensitive.txt contenuto nel file password.zip. Il file contiene 22 MD5 hashes. Utilizzeremo il tool John The Ripper. Iniziamo a condurre un brute force attack
+Eseguiremo un attacco a forza bruta e un attacco a dizionario  per scoprire le password presenti nel file sensitive.txt contenuto nel file password.zip. Il file contiene 22 MD5 hashes. Utilizzeremo il tool **John The Ripper**. Iniziamo a condurre un attacco a forza bruta. Un attacco a forza bruta tenta ogni possibile combinazione di caratteri fino a trovare la password corretta. Sebbene sia un metodo molto efficace, è anche estremamente dispendioso in termini di tempo e risorse computazionali, specialmente per password lunghe e complesse.
+
 Dal terminale digitate i seguenti comandi:
 ```
 john --incremental sensitive.txt
