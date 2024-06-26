@@ -3,9 +3,14 @@ layout: default
 title: Attacchi ai sistemi di autenticazione basati su password
 description: Prof.ssa Federica Paci
 ---
+In questo laboratorio utilizzeremo la macchina virtuale Kali Linux e la macchina virtuale Metasploitable2. Le due macchine virtuali devono essere collegate da una rete interna.
 
-# Attacchi offline 
-## Dictionary attack – documento pdf protetto da password
+# Attacchi offline
+Gli attacchi offline vengono eseguiti senza interagire direttamente con il sistema di autenticazione, ma lavorando invece su dati acquisiti, come hash di password. Ecco una panoramica dei principali tipi di attacchi offline:
+
+## Attacco a dizionario  – documento pdf protetto da password
+
+In un attacco a dizionario, l'attaccante utilizza un elenco predefinito di password comuni e parole presenti in un dizionario. Questo metodo è efficace perché molte persone utilizzano password semplici e prevedibili. L'attaccante confronta ogni parola del dizionario con l'hash della password rubata, cercando una corrispondenza. 
 
 Eseguiremo un dictionary attack per scoprire la password del documento confidential.pdf.  L’hash della password che protegge l’accesso al documento è memorizzato nei metadati del documento. Per estrarre l’hash della password usiamo il tool pdf2john.pl di John The Ripper
 
