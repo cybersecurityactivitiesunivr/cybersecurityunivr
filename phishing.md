@@ -143,3 +143,85 @@ Esegui il payload sulla macchina target:
 # ./payload.elf
 ```
 Una volta eseguito il payload, dovrebbe stabilire una connessione con il listener configurato sulla macchina Kali Linux, permettendoti di ottenere una sessione Meterpreter sulla macchina Metasploitable2.
+
+## Simulare una campagna di phishing con GoPhish
+
+Aprite un terminale e digitate il comando ./gophish per far partire GoPhish
+
+Aprite un secondo terminale e digitate il comando ./MailHog_linux_amd64
+ 
+Aprite Firefoz e digitate https://127.0.0.1:3333
+
+![image](gophish1.png)
+
+Fate il login con  utente: admin  e password: quella che e' stata generata.
+
+![image](gophish2.png)
+
+
+## Creare un Sending Profile
+
+![image](gophish3.png)
+
+Specificate un nome per il Sending Profile
+
+Specificate un indirizzo fasullo del mittente
+
+Specificate come host l'SMTP server di MailHog indicato nella figura
+
+Lasciate username e password in bianco
+
+Cliccate su Save Profile
+
+### Creazione Landing Page
+
+![image](gophish4.png)
+
+Creiamo una Landing Page ovvero il sito di phishing
+
+Specificare URL alla pagina di login del sito da clonare e cliccate Import
+
+Flaggate  l’opzione Capture Submitted Data
+
+Nel campo Redirect To specificate l’indirizzo del sito legittimo che e' stato clonato
+
+Cliccate su Save Page
+
+### Creare template email di phishing 
+
+![image](gophish5.png)
+
+Cliccate su Email Templates per creare il template dell’email di phishing
+
+Date un Nome al Template
+
+Cliccate su Import Email e Copiate il sorgente dell’email di phishing che volete utilizzare un'email esistente
+
+Cliccate su Import una volta terminato di copiare il codice sorgente dell’email
+ 
+Cliccate su Save Template
+
+### Creare la lista delle potenziali vittime
+
+![image](gophish6.png)
+
+Cliccate su Users and Groups per definire la lista delle vittime a cui mandare l’email di phishing. Le singole vittime possono essere specificate singolarmente e aggiunte mediante il bottone Add oppure è possibile importare un file .cvs con la lista delle vittime
+
+Cliccate su Save Changes
+
+### Creare una nuova campagna di phishing 
+
+![image](gophish7.png)
+
+•Create una nuova campagna di phishing cliccando su Campaigns e specificate sotto Email Template, Landing Page, Sending Profile e Groups il nome di quelli che abbiamo creato nei passaggi precedenti.
+
+Dopo di che cliccate su Launch Campaign.
+
+L’email di spearphishing è stata inviata come si può vedere dalla Dashboard di GoPhish
+ 
+Potete visualizzare l’email inviata dall’interfaccia grafica di MailHog sulla macchina Kali Linux all'indirizzo http://0.0.0.0:8025
+ 
+Cliccate su Change Password nell’email e inserite le credenziali
+
+
+Aprite la dashboard di GoPhish e visualizzate i dati sottomessi dalla vittima
