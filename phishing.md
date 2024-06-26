@@ -227,7 +227,7 @@ Potete visualizzare l’email inviata dall’interfaccia grafica di MailHog sull
 
 ![image](gophish11.png)
  
-Cliccate su Change Password nell’email e inserite le credenziali
+Cliccate su Change Password nell’email e inserite le credenziali nella pagina di phishing che copia la pagina di login di Netflix
 
 Aprite la dashboard di GoPhish e visualizzate i dati sottomessi dalla vittima
 
