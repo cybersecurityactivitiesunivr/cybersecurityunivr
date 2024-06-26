@@ -93,14 +93,14 @@ john –wordlist=<dizionario sotto la cartella john> passwords.txt
 Quali password siete riusciti a recuperare?
  
 
-# Online Attacks with Hydra
+# Attacchi online con  Hydra
 
-•	Per questo attacco vi serviranno sia la macchina Kali Linux che la macchina Metasploitable2 dove è installata l’applicazione web di cui trovare la password DVWA. Utilizzeremo anche BurpSuite per capire quali parametri vengono passati all’applicazione durante la fase di autenticazione.
-•	L’obiettivo dell’attacco è trovare la password di amministratore per accedere all’applicazione DVWA
-•	Fate partire entrambe le macchine e assicurative che tra le macchine ci sia una rete NAT.
-•	Quando fate partire la macchina su cui è installata DVWA  vi chiederà uno username e password. Specificate msfadmin come username e come password msfadmin
-•	Da riga di comando eseguite il comando ifconfig per determinare l’indirizzo IP della macchina Metasploitable2
-•	Aprite un terminale sulla macchina Kali ed eseguite il seguente comando per controllare che la macchina su cui è installata DVWA è raggiungibile:
+Per questo attacco vi serviranno sia la macchina Kali Linux che la macchina Metasploitable2 dove è installata l’applicazione web di cui trovare la password DVWA. Utilizzeremo anche **BurpSuite** per capire quali parametri vengono passati all’applicazione durante la fase di autenticazione.
+L’obiettivo dell’attacco è trovare la password di amministratore per accedere all’applicazione DVWA. Fate partire entrambe le macchine e assicurative che tra le macchine ci sia una rete NAT.
+
+Da terminale eseguite il comando ifconfig per determinare l’indirizzo IP della macchina Metasploitable2
+
+Aprite un terminale sulla macchina Kali ed eseguite il seguente comando per controllare che la macchina su cui è installata DVWA è raggiungibile:
 
 ping <INDIRIZZO IP METASPLOITABLE2>
 
