@@ -12,7 +12,7 @@ Gli attacchi offline vengono eseguiti senza interagire direttamente con il siste
 
 In un attacco a dizionario, l'attaccante utilizza un elenco predefinito di password comuni e parole presenti in un dizionario. Questo metodo è efficace perché molte persone utilizzano password semplici e prevedibili. L'attaccante confronta ogni parola del dizionario con l'hash della password rubata, cercando una corrispondenza. 
 
-Eseguiremo un dictionary attack per scoprire la password del documento confidential.pdf.  L’hash della password che protegge l’accesso al documento è memorizzato nei metadati del documento. Per estrarre l’hash della password usiamo il tool pdf2john.pl di John The Ripper
+Eseguiremo un dictionary attack per scoprire la password del documento **confidential.pdf**.  L’hash della password che protegge l’accesso al documento è memorizzato nei metadati del documento. Per estrarre l’hash della password usiamo il tool **pdf2john.pl** di John The Ripper.
 
 Aprite un terminale digitate i seguenti comandi
 ```
@@ -28,7 +28,9 @@ Dove l’hash della password è:
 ```
 $pdf$4*4*128*-4*1*16*be67ac70a35391f5b6716bfe7c30af81*32*4f185e9a05c20bf7eb9aceea2d1e3a7d00000000000000000000000000000000*32*a6454eaef509a12ad3f3d3caaafe8acd835b0be4f56ceb5ac5dc733d9b838a4f
 ```
-Per recuperare la password in chiaro utilizzeremo hashcat con il seguente comando
+Per recuperare la password in chiaro utilizzeremo **Hashcat**. Hashcat è un potente strumento di cracking delle password che utilizza attacchi a forza bruta e attacchi a dizionario per recuperare password a partire dai loro hash. È molto apprezzato nella comunità della sicurezza informatica per la sua velocità, efficienza e flessibilità. Hashcat supporta una vasta gamma di algoritmi di hashing e può essere eseguito su diverse piattaforme hardware, inclusi CPU, GPU e dispositivi FPGA.
+
+Digitate il seguente comando
 ```
 hashcat -m 10500 -a 0 '$pdf$4*4*128*-4*1*16*be67ac70a35391f5b6716bfe7c30af81*32*4f185e9a05c20bf7eb9aceea2d1e3a7d00000000000000000000000000000000*32*a6454eaef509a12ad3f3d3caaafe8acd835b0be4f56ceb5ac5dc733d9b838a4f' dictionary.txt
 ```
@@ -41,7 +43,7 @@ dove
 
 ## Dictionary attack – Cracking MD5 password hashes 
 
-Eseguiremo un dictionary attack per scoprire le password presenti nel file hashes.txt contenuto nella cartella hashcat. Il file contiene 9 MD5 hashes
+Eseguiremo un dictionary attack per scoprire le password presenti nel file hashes.txt contenuto nella cartella **hashcat**. Il file contiene 9 MD5 hashes.
 
 Dal terminale digitate il seguente comando
 ```
@@ -51,7 +53,7 @@ hashcat -m 0 -a 0 hashes.txt  dictionary.txt
   
 Per consentire di recuperare le altre password, eseguiremo un dictionary attack dove alle parole del dizionario applicheremo delle regole supportate da hashcat per rappresentare  patterns utilizzati dagli utenti nel formulare le loro passwords.
 
-Utilizzeremo la regola leapspeak.rule che si trova sotto la cartella /usr/share/hashcat/rules/leetspeak.rule. Questa regola va a sostituire le lettere che compongono le parole nel dizionario con simboli o numeri. Per esempio la parola password applicando questa regola può diventare “p455w0rd”, “p@5sw0rd”, “passw0rd”.
+Utilizzeremo la regola _leapspeak.rule_ che si trova sotto la cartella _/usr/share/hashcat/rules/leetspeak.rule_. Questa regola va a sostituire le lettere che compongono le parole nel dizionario con simboli o numeri. Per esempio la parola password applicando questa regola può diventare “p455w0rd”, “p@5sw0rd”, “passw0rd”.
 
 Per applicare la regola alle parole contenute nel dizionario dictionary.txt eseguiamo il seguente comando:
 ```
