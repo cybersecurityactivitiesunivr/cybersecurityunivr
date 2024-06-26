@@ -7,22 +7,28 @@ description: Prof.ssa Federica Paci
 
 Eseguiremo un dictionary attack per scoprire la password del documento confidential.pdf.  L’hash della password che protegge l’accesso al documento è memorizzato nei metadati del documento. Per estrarre l’hash della password usiamo il tool pdf2john.pl di John The Ripper
 
-Dal terminale digitate i seguenti comandi
+Aprite un terminale digitate i seguenti comandi
+```
+# cd <path alla cartella dove avete scompattato il password.zip>
+# pdf2john confidential.pdf
+```
+Il comando restituirà il seguente valore
 
-cd Desktop/hashcat
-pdf2john confidential.pdf
-
-•	Il comando restituirà il seguente valore
-confidential.pdf:$pdf$4*4*128*-4*1*16*be67ac70a35391f5b6716bfe7c30af81*32*4f185e9a05c20bf7eb9aceea2d1e3a7d00000000000000000000000000000000*32*a6454eaef509a12ad3f3d3caaafe8acd835b0be4f56ceb5ac5dc733d9b838a4f 
-•	Dove l’hash della password è:
-$pdf$4*4*128*-4*1*16*be67ac70a35391f5b6716bfe7c30af81*32*4f185e9a05c20bf7eb9aceea2d1e3a7d00000000000000000000000000000000*32*a6454eaef509a12ad3f3d3caaafe8acd835b0be4f56ceb5ac5dc733d9b838a4f
-•	Per recuperare la password in chiaro utilizzeremo hashcat con il seguente comando
+```
+confidential.pdf:$pdf$4*4*128*-4*1*16*be67ac70a35391f5b6716bfe7c30af81*32*4f185e9a05c20bf7eb9aceea2d1e3a7d00000000000000000000000000000000*32*a6454eaef509a12ad3f3d3caaafe8acd835b0be4f56ceb5ac5dc733d9b838a4f
+```
+Dove l’hash della password è:
+```$pdf$4*4*128*-4*1*16*be67ac70a35391f5b6716bfe7c30af81*32*4f185e9a05c20bf7eb9aceea2d1e3a7d00000000000000000000000000000000*32*a6454eaef509a12ad3f3d3caaafe8acd835b0be4f56ceb5ac5dc733d9b838a4f
+```
+Per recuperare la password in chiaro utilizzeremo hashcat con il seguente comando
+```
 hashcat -m 10500 -a 0 '$pdf$4*4*128*-4*1*16*be67ac70a35391f5b6716bfe7c30af81*32*4f185e9a05c20bf7eb9aceea2d1e3a7d00000000000000000000000000000000*32*a6454eaef509a12ad3f3d3caaafe8acd835b0be4f56ceb5ac5dc733d9b838a4f' dictionary.txt
+```
 dove 
-•	-m 10500 indica la tipologia dell’hash utilizzato per proteggere la password
-•	-a 0 indica la tipologia di attacco che in questo caso è un dictionary attack
-•	‘password’ è l’hash della password da recuperare
-•	dictionary.txt è il dizionario che viene utilizzato per recuperare la password
+*	-m 10500 indica la tipologia dell’hash utilizzato per proteggere la password
+*	-a 0 indica la tipologia di attacco che in questo caso è un dictionary attack
+*	‘password’ è l’hash della password da recuperare
+*	dictionary.txt è il dizionario che viene utilizzato per recuperare la password
  
 
 Dictionary attack – Cracking MD5 password hashes 
