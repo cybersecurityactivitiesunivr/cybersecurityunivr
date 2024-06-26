@@ -117,43 +117,40 @@ Andate sulle Preferenze del browser e cliccate su Network Settings in fondo alla
 Selezionate Manual proxy configuration e sia per il protocollo http che https specificate come indirizzo 127.0.0.1 e come porta 8080 e poi cliccate OK in fondo.
 
 ![image](burpsuite2.png)
-
  
-Aprite Burpsuite e accettate i termini e le condizioni per il servizio come illustrato nella figura qui sotto
+Aprite Burpsuite e accettate i termini e le condizioni per il servizio come illustrato nella figura qui sotto.
+
+![image](DMWA.png)
 
 Quando si presenta la seguente interfaccia cliccate Next.
 
 ![image](burpsuite3.png)
 
 Cliccate Start Burp come illustrato nella figura qui sotto
- 
+
+![image](burpsuite4.png)
 
 Cliccate su Proxy 
 
- 
-
-
-
-
+ ![image](burpsuite5.png)
 
 Se Intercept is on è evidenziato come illustrato nella figura qui sotto allora Burp Suite sta funzionando correttamente
 
- 
+  ![image](burpsuite6.png)
 
-Tornate sulla pagina di login di DVWA e provato a fare login
+Tornate sulla pagina di login di DVWA e provate a fare login.
 
- 
-
-
-
+ ![image](DVWA.png) 
 
 
 Burp Suite ha intercettato la POST request. Potete vedere che ci sono 3 parametri: username, password e Login che è l'azione che viene eseguita.
+  ![image](burpsuite7.png)
+
  
 Aprite un terminale sulla macchina Kali e digitate il seguente comando
-
+```
 hydra -V -l admin -P /usr/share/john/password.lst <INDIRIZZO IP METASPLOITABLE2) http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login Failed"
-
+```
                    dove 
 * L’opzione -V indica la modalità verbose dove ogni password provata verrà stampata a video
 * -l indica lo username di cui recuperare la password
