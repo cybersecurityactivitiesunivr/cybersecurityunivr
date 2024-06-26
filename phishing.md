@@ -50,5 +50,20 @@ Selezionate l' opzione 2) Website Attack Vector
 
 ![image](set3.png)
 
+Selezionate l’opzione 3) Credential Harvester Attack Method
 
+![image](set4.png)
+
+Selezionare l’opzione 2 Site Cloner 
+
+Specificare come indirizzo IP quello della macchina Kali Linux
+
+Specificare URL del sito da clonare. Il sito deve avere una form di login
+
+![image](set5.png)
+
+Aprite Firefox e isitate il sito web digitando localhost nella barra degli indirizzi del browser e inserite un’ indirizzo email e una password fasulli
+
+
+## Creare Chiavetta USB infetta 
 
