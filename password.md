@@ -68,7 +68,7 @@ hashcat -m 0 -a 6 hashes.txt  dictionary.txt ?d?d?d?d
  
 ## Attacchi a Forza Bruta e a Dizionario con John The Ripper
 
-Eseguiremo un attacco a forza bruta e un attacco a dizionario  per scoprire le password presenti nel file sensitive.txt contenuto nel file password.zip. Il file contiene 22 MD5 hashes. Utilizzeremo il tool **John The Ripper**. John the Ripper, spesso abbreviato in "John", è uno degli strumenti di cracking delle password più conosciuti e utilizzati nel campo della sicurezza informatica. Originariamente progettato per Unix, è ora disponibile per un'ampia gamma di piattaforme tra cui Windows, macOS e Linux. John the Ripper è utilizzato per rilevare password deboli, testare la robustezza delle password e migliorare la sicurezza delle credenziali.
+Eseguiremo un attacco a forza bruta e un attacco a dizionario  per scoprire le password presenti nel file sensitive.txt contenuto nel file password.zip. Il file contiene 20 MD5 hashes. Utilizzeremo il tool **John The Ripper**. John the Ripper, spesso abbreviato in "John", è uno degli strumenti di cracking delle password più conosciuti e utilizzati nel campo della sicurezza informatica. Originariamente progettato per Unix, è ora disponibile per un'ampia gamma di piattaforme tra cui Windows, macOS e Linux. John the Ripper è utilizzato per rilevare password deboli, testare la robustezza delle password e migliorare la sicurezza delle credenziali.
 
 Iniziamo conducendo un attacco a forza bruta. Un attacco a forza bruta tenta ogni possibile combinazione di caratteri fino a trovare la password corretta. Sebbene sia un metodo molto efficace, è anche estremamente dispendioso in termini di tempo e risorse computazionali, specialmente per password lunghe e complesse.
 
