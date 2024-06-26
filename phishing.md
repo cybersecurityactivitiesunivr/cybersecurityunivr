@@ -13,7 +13,7 @@ Per questa attivita' utilizzeremo la macchina **Kali Linux**. Prima di condurre 
 
 **GoPhish** è uno strumento open source per la gestione e l'esecuzione di campagne di phishing simulato. È progettato per aiutare le organizzazioni a testare e migliorare la consapevolezza sulla sicurezza dei propri dipendenti. Con GoPhish, le organizzazioni possono creare e gestire campagne di phishing realistiche, monitorare le risposte dei destinatari e analizzare i risultati per identificare le aree in cui è necessario migliorare la formazione sulla sicurezza.
 
-## Installazione Maihog
+## Installazione Mailhog
 
 Scaricate sulla macchina Kali Linux il file MailHog_linux_amd64.zip dal seguente url https://github.com/mailhog/MailHog/releases/v1.0.0.
 
@@ -22,6 +22,7 @@ Estraete il file MailHog_linux_amd64.zip in una cartella sotto la cartella Deskt
 Aprite un terminale e digitate i seguenti comandi: 
 
 
+## Installazione Mailhog
 
 ## Creare un email di phishing con allegato malevolo
 
