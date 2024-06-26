@@ -151,7 +151,6 @@ Aprite un secondo terminale e digitate il comando ./MailHog_linux_amd64
  
 Aprite Firefox e digitate nella barra degli indirizzi https://127.0.0.1:3333
 
-![image](gophish1.png)
 
 Fate il login con  utente: admin  e password: quella che e' stata generata.
 
