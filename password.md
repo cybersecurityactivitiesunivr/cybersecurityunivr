@@ -3,7 +3,7 @@ layout: default
 title: Attacchi ai sistemi di autenticazione basati su password
 description: Prof.ssa Federica Paci
 ---
-In questo laboratorio utilizzeremo la macchina virtuale Kali Linux e la macchina virtuale Metasploitable2. Le due macchine virtuali devono essere collegate da una rete interna.
+In questo laboratorio utilizzeremo la macchina virtuale **Kali Linux** e la macchina virtuale **Metasploitable2**. Le due macchine virtuali devono essere collegate da una rete interna.
 
 # Attacchi offline
 Gli attacchi offline vengono eseguiti senza interagire direttamente con il sistema di autenticazione, ma lavorando invece su dati acquisiti, come hash di password. Ecco una panoramica dei principali tipi di attacchi offline:
