@@ -7,7 +7,10 @@ description: Prof.ssa Federica Paci
 
 L'ingegneria sociale è una tecnica di manipolazione psicologica utilizzata per indurre le persone a divulgare informazioni confidenziali, eseguire azioni che compromettano la sicurezza o rivelare dati sensibili. Questa tecnica si basa sull'interazione umana e sfrutta la fiducia, la curiosità, la paura o l'ignoranza delle vittime per ottenere accesso a informazioni o sistemi protetti.
 
-Per questa attivita' utilizzeremo la macchina **Kali Linux**. Prima di condurre gli attacchi di ingegneria sociale dobbiamo installare sulla macchina Kali Linux, due software **Mailhog** e **GoPhish**.
+Per questa attivita' utilizzeremo la macchina **Kali Linux** e il **Social Engineering Tookit (SET)** installato sulla macchina Kali Linux. 
+SET  offre una vasta gamma di funzionalità per simulare attacchi di ingegneria sociale e valutare la resilienza di individui e organizzazioni contro tali attacchi. 
+
+Prima di condurre gli attacchi di ingegneria sociale utilizzando SET dobbiamo installare sulla macchina Kali Linux, due software **Mailhog** e **GoPhish**.
 
 **Mailhog** è uno strumento di testing e sviluppo per le email. È un server SMTP simulato che cattura le email inviate dalle applicazioni in fase di sviluppo, consentendo agli sviluppatori di testare l'invio di email senza il rischio di inviare email reali a destinatari reali. MailHog fornisce un'interfaccia web semplice per visualizzare, cercare e gestire le email catturate.
 
@@ -26,7 +29,26 @@ Aprite un terminale e digitate i seguenti comandi per dare permessi di esecuzion
 ```
 ## Installazione GoPhish
 
-## Creare un email di phishing con allegato malevolo
+Scaricate sulla macchina Kali Linux il file gophish-v0.12.1-linux-64bit.zip dal seguente url https://github.com/gophish/gophish/releases.
+
+Estraete il file zip in una cartella sotto la cartella Desktop.
+```
+# chmod +x 
+```
+## Creare un sito di phishing per rubare credenziali
 
 
-![image]()
+Eseguite il Social Engineering Toolkit dal menu principale della macchina Kali come illustrato nella figura qui sotto.
+
+[image](set1.png)
+
+Selezionate l’opzione 1) Social Engineering Attacks
+
+![image](set2.png)
+
+Selezionate l' opzione 2) Website Attack Vector
+
+![image](set3.png)
+
+
+
