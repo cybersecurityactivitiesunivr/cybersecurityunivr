@@ -33,14 +33,14 @@ Scaricate sulla macchina Kali Linux il file gophish-v0.12.1-linux-64bit.zip dal 
 
 Estraete il file zip in una cartella sotto la cartella Desktop.
 ```
-# chmod +x 
+# chmod +x gophish
 ```
 ## Creare un sito di phishing per rubare credenziali
 
 
 Eseguite il Social Engineering Toolkit dal menu principale della macchina Kali come illustrato nella figura qui sotto.
 
-[image](set1.png)
+![image](set1.png)
 
 Selezionate l’opzione 1) Social Engineering Attacks
 
