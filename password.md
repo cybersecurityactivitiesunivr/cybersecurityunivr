@@ -5,6 +5,8 @@ description: Prof.ssa Federica Paci
 ---
 In questo laboratorio utilizzeremo la macchina virtuale **Kali Linux** e la macchina virtuale **Metasploitable2**. Le due macchine virtuali devono essere collegate da una rete interna.
 
+Prima di iniziare il laboratorio scaricate [File](password.zip) sulla macchina Kali Linux e estraetelo. 
+
 # Attacchi offline
 Gli attacchi offline vengono eseguiti senza interagire direttamente con il sistema di autenticazione, ma lavorando invece su dati acquisiti, come il file delle password che contiene gli hash delle password. 
 
