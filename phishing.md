@@ -17,9 +17,9 @@ Per questa attivita' utilizzeremo la macchina **Kali Linux**. Prima di condurre 
 
 Scaricate sulla macchina Kali Linux il file MailHog_linux_amd64 dal seguente url https://github.com/mailhog/MailHog/releases/v1.0.0.
 
-Estraete il file MailHog_linux_amd64.zip in una cartella sotto la cartella Desktop.
+Salvate il file MailHog_linux_amd64 sotto la cartella Desktop.
 
-Aprite un terminale e digitate i seguenti comandi: 
+Aprite un terminale e digitate i seguenti comandi per dare permessi di esecuzione al file:
 
 
 ## Installazione Mailhog
