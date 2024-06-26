@@ -68,7 +68,9 @@ hashcat -m 0 -a 6 hashes.txt  dictionary.txt ?d?d?d?d
  
 ## Attacchi a Forza Bruta e a Dizionario con John The Ripper
 
-Eseguiremo un attacco a forza bruta e un attacco a dizionario  per scoprire le password presenti nel file sensitive.txt contenuto nel file password.zip. Il file contiene 22 MD5 hashes. Utilizzeremo il tool **John The Ripper**. Iniziamo a condurre un attacco a forza bruta. Un attacco a forza bruta tenta ogni possibile combinazione di caratteri fino a trovare la password corretta. Sebbene sia un metodo molto efficace, è anche estremamente dispendioso in termini di tempo e risorse computazionali, specialmente per password lunghe e complesse.
+Eseguiremo un attacco a forza bruta e un attacco a dizionario  per scoprire le password presenti nel file sensitive.txt contenuto nel file password.zip. Il file contiene 22 MD5 hashes. Utilizzeremo il tool **John The Ripper**. John the Ripper, spesso abbreviato in "John", è uno degli strumenti di cracking delle password più conosciuti e utilizzati nel campo della sicurezza informatica. Originariamente progettato per Unix, è ora disponibile per un'ampia gamma di piattaforme tra cui Windows, macOS e Linux. John the Ripper è utilizzato per rilevare password deboli, testare la robustezza delle password e migliorare la sicurezza delle credenziali.
+
+Iniziamo conducendo un attacco a forza bruta. Un attacco a forza bruta tenta ogni possibile combinazione di caratteri fino a trovare la password corretta. Sebbene sia un metodo molto efficace, è anche estremamente dispendioso in termini di tempo e risorse computazionali, specialmente per password lunghe e complesse.
 
 Dal terminale digitate i seguenti comandi:
 ```
@@ -79,7 +81,7 @@ Per consentire di recuperare le altre password, eseguiremo un dictionary attack 
 john --wordlist=/usr/share/john/password.lst sensitive.txt
 ```
 
-Ripetete il dictionary attack utilizzando i dizionari che si trovano sotto la cartella cain.txt  facebook-pastebay.txt  hotmail.txt  myspace.txt.
+Ripetete il dictionary attack utilizzando i dizionari che si trovano nel file password.zip: cain.txt  facebook-pastebay.txt  hotmail.txt  myspace.txt.
 
 ## Dictionary attacks - Cracking 
 Eseguiremi una serie di dictionary attacks per scoprire le password presenti nei file passwd e shadow  che contengono gli username e gli hash delle password degli utenti che hanno accesso alla macchina Metasploitable2. 
