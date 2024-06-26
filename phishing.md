@@ -21,8 +21,10 @@ Salvate il file MailHog_linux_amd64 sotto la cartella Desktop.
 
 Aprite un terminale e digitate i seguenti comandi per dare permessi di esecuzione al file:
 
-
-## Installazione Mailhog
+```
+# chmod +x MailHog_linux_amd64
+```
+## Installazione GoPhish
 
 ## Creare un email di phishing con allegato malevolo
 
