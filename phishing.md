@@ -67,9 +67,9 @@ Aprite Firefox e visitate il sito web digitando localhost nella barra degli indi
 
 ## Creare Chiavetta USB infetta 
 
-* Dal menu' principale di SET selezionare l'opzione 3) Infectious Media Generator.
+Dal menu' principale di SET selezionare l'opzione 3) Infectious Media Generator.
 
-* Poi Selezionare Opzione 1 – File Format Exploits
+Poi Selezionare Opzione 1 – File Format Exploits
 
 Specificare indirizzo IP della macchina Kali Linux 
 
@@ -77,10 +77,10 @@ Selezionare Opzione 13 – Adobe PDF Embedded Social Engineering
 
 ![image](usb1.png)
 
-*	Selezionare Opzione 2 – Use built-in BLANK PDF for attack
-*	Selezionare opzione 5 – Windows Meterpreter Reverse_TCP (x64)
-*	Lasciare come indirizzo IP e porta di default
-*	Copiare la cartella /root/.set/autorun su una chiavetta USB
+Selezionare Opzione 2 – Use built-in BLANK PDF for attack
+Selezionare opzione 5 – Windows Meterpreter Reverse_TCP (x64)
+Lasciare come indirizzo IP e porta di default
+Copiare la cartella /root/.set/autorun su una chiavetta USB
 
 ![image](usb2.png)
   
