@@ -172,5 +172,5 @@ Facciamo partire la console di Metasploit  con il comando msfconsole e poi cerch
 Selezioniamo l’opzione 1 e specifichiamo i vari parametri:
  
 Dopo pochi secondi otterremo le password desiderate:
-![image](https://github.com/cybersecurityactivitiesunivr/cybersecurityunivr/burpsuite1.png)
+![image](burpsuite1.png)
 
