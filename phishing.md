@@ -85,7 +85,6 @@ Lasciare come indirizzo IP e porta di default
 
 Copiare la cartella /root/.set/autorun su una chiavetta USB
 
-![image](usb3.png)
 
 ## Creare un QRCode Malevolo 
 
