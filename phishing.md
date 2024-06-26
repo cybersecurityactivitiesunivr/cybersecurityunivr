@@ -62,7 +62,7 @@ Specificare URL del sito da clonare. Il sito deve avere una form di login
 
 ![image](set5.png)
 
-Aprite Firefox e isitate il sito web digitando localhost nella barra degli indirizzi del browser e inserite un’ indirizzo email e una password fasulli
+Aprite Firefox e visitate il sito web digitando localhost nella barra degli indirizzi del browser e inserite un’ indirizzo email e una password fasulli
 
 
 ## Creare Chiavetta USB infetta 
