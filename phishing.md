@@ -149,7 +149,7 @@ Aprite un terminale e digitate il comando ./gophish per far partire GoPhish
 
 Aprite un secondo terminale e digitate il comando ./MailHog_linux_amd64
  
-Aprite Firefoz e digitate https://127.0.0.1:3333
+Aprite Firefox e digitate nella barra degli indirizzi https://127.0.0.1:3333
 
 ![image](gophish1.png)
 
