@@ -213,17 +213,22 @@ Cliccate su Save Changes
 
 ### Creare una nuova campagna di phishing 
 
+Create una nuova campagna di phishing cliccando su Campaigns e specificate sotto Email Template, Landing Page, Sending Profile e Groups il nome di quelli che abbiamo creato nei passaggi precedenti.
 
-
-•Create una nuova campagna di phishing cliccando su Campaigns e specificate sotto Email Template, Landing Page, Sending Profile e Groups il nome di quelli che abbiamo creato nei passaggi precedenti.
+![image](gophish9.png)
 
 Dopo di che cliccate su Launch Campaign.
+
+![image](gophish10.png)
 
 L’email di spearphishing è stata inviata come si può vedere dalla Dashboard di GoPhish
  
 Potete visualizzare l’email inviata dall’interfaccia grafica di MailHog sulla macchina Kali Linux all'indirizzo http://0.0.0.0:8025
+
+![image](gophish11.png)
  
 Cliccate su Change Password nell’email e inserite le credenziali
 
-
 Aprite la dashboard di GoPhish e visualizzate i dati sottomessi dalla vittima
+
+![image](gophish12.png)
