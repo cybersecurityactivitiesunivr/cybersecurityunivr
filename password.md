@@ -140,11 +140,11 @@ Se Intercept is on è evidenziato come illustrato nella figura qui sotto allora 
 
 Tornate sulla pagina di login di DVWA e provate a fare login.
 
- ![image](DVWA.png) 
+ ![image](DVWA_login.png) 
 
 
 Burp Suite ha intercettato la POST request. Potete vedere che ci sono 3 parametri: username, password e Login che è l'azione che viene eseguita.
-  ![image](burpsuite7.png)
+  ![image](burpsuite9.png)
 
  
 Aprite un terminale sulla macchina Kali e digitate il seguente comando
