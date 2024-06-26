@@ -1,4 +1,9 @@
-* Dictionary attack – documento pdf protetto da password
+---
+layout: default
+title: Attacchi ai sistemi di autenticazione basati su password
+description: Prof.ssa Federica Paci
+---
+# Dictionary attack – documento pdf protetto da password
 
 Eseguiremo un dictionary attack per scoprire la password del documento confidential.pdf.  L’hash della password che protegge l’accesso al documento è memorizzato nei metadati del documento. Per estrarre l’hash della password usiamo il tool pdf2john.pl di John The Ripper
 
