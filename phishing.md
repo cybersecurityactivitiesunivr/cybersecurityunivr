@@ -135,11 +135,11 @@ Una volta generato il payload, è necessario configurare un listener sulla tua m
 Trasferisci il file payload.elf sulla macchina Metasploitable2  e rendilo eseguibile con il comando:
 
 ```
-chmod +x payload.elf
+# chmod +x payload.elf
 ```
 Esegui il payload sulla macchina target:
 
 ```
-./payload.elf
+# ./payload.elf
 ```
 Una volta eseguito il payload, dovrebbe stabilire una connessione con il listener configurato sulla macchina Kali Linux, permettendoti di ottenere una sessione Meterpreter sulla macchina Metasploitable2.
