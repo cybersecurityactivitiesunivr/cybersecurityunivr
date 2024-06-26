@@ -116,7 +116,7 @@ Spiegazione dei Parametri:
 * -f elf: Specifica il formato del payload. Per Linux, il formato ELF è comunemente usato.
 * -o payload.elf: Specifica il nome del file di output che conterrà il payload.
 
-Una volta generato il payload, è necessario configurare un listener sulla tua macchina per ricevere la connessione reverse shell. Questo può essere fatto utilizzando Metasploit:
+Una volta generato il payload, è necessario configurare un listener sulla  macchina  Kali Linux per ricevere la connessione reverse shell. Questo può essere fatto utilizzando Metasploit:
 
 ```
 # msfconsole
