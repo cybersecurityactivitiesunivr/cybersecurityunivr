@@ -110,17 +110,20 @@ Aprite il browser sulla macchina Kali e navigate all’URL http://<INDIRIZZO IP 
 
 Dobbiamo configurare il browser per usare Burp Suite come proxy per intercettare la richiesta POST fatta all’applicazione quando un utente tenta di fare il login.
 
-Andate sulle Preferenze del browser e cliccate su Network Settings in fondo alla pagina delle preferenze come illustrato nella figura qui sotto
-
- 
+Andate sulle Preferenze del browser e cliccate su Network Settings in fondo alla pagina delle preferenze come illustrato nella figura qui sotto:
+![image](burpsuite1.png)
 
 
 Selezionate Manual proxy configuration e sia per il protocollo http che https specificate come indirizzo 127.0.0.1 e come porta 8080 e poi cliccate OK in fondo.
+
+![image](burpsuite2.png)
+
  
 Aprite Burpsuite e accettate i termini e le condizioni per il servizio come illustrato nella figura qui sotto
- 
 
-Quando si presenta la seguente interfaccia cliccate Next 
+Quando si presenta la seguente interfaccia cliccate Next.
+
+![image](burpsuite3.png)
 
 Cliccate Start Burp come illustrato nella figura qui sotto
  
@@ -172,5 +175,4 @@ Facciamo partire la console di Metasploit  con il comando msfconsole e poi cerch
 Selezioniamo l’opzione 1 e specifichiamo i vari parametri:
  
 Dopo pochi secondi otterremo le password desiderate:
-![image](burpsuite1.png)
 
