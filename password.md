@@ -98,48 +98,34 @@ john –wordlist=< path al dizionario > passwords.txt
 _Quali password siete riusciti a recuperare?_
  
 
-# Attacchi online con  Hydra
+# Attacchi online con Hydra 
 
-Per questo attacco vi serviranno sia la macchina Kali Linux che la macchina Metasploitable2 dove è installata l’applicazione web di cui trovare la password DVWA. Utilizzeremo anche **BurpSuite** per capire quali parametri vengono passati all’applicazione durante la fase di autenticazione.
-L’obiettivo dell’attacco è trovare la password di amministratore per accedere all’applicazione DVWA. Fate partire entrambe le macchine e assicurative che tra le macchine ci sia una rete NAT.
+Gli attacchi online ai sistemi di autenticazione basati su password sono tentativi di accedere a un sistema o a un account interagendo direttamente con il sistema di autenticazione attraverso la rete. A differenza degli attacchi offline, che si basano su dati rubati come hash di password e vengono eseguiti senza interagire con il sistema di autenticazione, gli attacchi online richiedono una connessione diretta al sistema di autenticazione e spesso coinvolgono l'invio di richieste ripetute per indovinare la password corretta.
 
-Da terminale eseguite il comando ifconfig per determinare l’indirizzo IP della macchina Metasploitable2
+Per questo attacco vi serviranno sia la macchina Kali Linux che la macchina Metasploitable2 dove è installata l’applicazione web di cui trovare la password DVWA. Per condurre l'attacco online utilizzeremo  **BurpSuite** per capire quali parametri vengono passati all’applicazione durante la fase di autenticazione, e **Hydra**. Hydra è un potente strumento di cracking delle password utilizzato per eseguire attacchi a forza bruta e attacchi a dizionario su vari protocolli di rete e servizi di autenticazione.
 
-Aprite un terminale sulla macchina Kali ed eseguite il seguente comando per controllare che la macchina su cui è installata DVWA è raggiungibile:
+L’obiettivo dell’attacco è trovare la password di amministratore per accedere all’applicazione DVWA. 
 
-ping <INDIRIZZO IP METASPLOITABLE2>
+Aprite il browser sulla macchina Kali e navigate all’URL http://<INDIRIZZO IP METASPLOITABLE2>
 
-•	Aprite il browser sulla macchina Kali e navigate all’URL http://<INDIRIZZO IP METASPLOITABLE2>
-•	Dobbiamo configurare il browser per usare Burp Suite come proxy per intercettare la richiesta POST fatta all’applicazione quando un utente tenta di fare il login
-•	Andate sulle Preferenze del browser e cliccate su Network Settings in fondo alla pagina delle preferenze come illustrato nella figura qui sotto
+Dobbiamo configurare il browser per usare Burp Suite come proxy per intercettare la richiesta POST fatta all’applicazione quando un utente tenta di fare il login.
+
+Andate sulle Preferenze del browser e cliccate su Network Settings in fondo alla pagina delle preferenze come illustrato nella figura qui sotto
 
  
 
 
-•	Selezionate Manual proxy configuration e sia per il protocollo http che https specificate come indirizzo 127.0.0.1 e come porta 8080 e poi cliccate OK in fondo.
+Selezionate Manual proxy configuration e sia per il protocollo http che https specificate come indirizzo 127.0.0.1 e come porta 8080 e poi cliccate OK in fondo.
  
-•	Aprite Burpsuite e accettate i termini e le condizioni per il servizio come illustrato nella figura qui sotto
- 
-
-•	Quando si presenta la seguente interfaccia cliccate Next 
-
-•	 
-
-
-
-
-
-
-
-
-
-
-
-
-•	Cliccate Start Burp come illustrato nella figura qui sotto
+Aprite Burpsuite e accettate i termini e le condizioni per il servizio come illustrato nella figura qui sotto
  
 
-•	Cliccate su Proxy 
+Quando si presenta la seguente interfaccia cliccate Next 
+
+Cliccate Start Burp come illustrato nella figura qui sotto
+ 
+
+Cliccate su Proxy 
 
  
 
@@ -147,11 +133,11 @@ ping <INDIRIZZO IP METASPLOITABLE2>
 
 
 
-•	Se Intercept is on è evidenziato come illustrato nella figura qui sotto allora Burp Suite sta funzionando correttamente
+Se Intercept is on è evidenziato come illustrato nella figura qui sotto allora Burp Suite sta funzionando correttamente
 
  
 
-•	Tornate sulla pagina di login di DVWA e provato a fare login
+Tornate sulla pagina di login di DVWA e provato a fare login
 
  
 
@@ -159,60 +145,32 @@ ping <INDIRIZZO IP METASPLOITABLE2>
 
 
 
-•	Burp Suite ha intercettato la POST request. Potete vedere che ci sono 3 parametri: username, password e Login che è l'azione che viene eseguita.
+Burp Suite ha intercettato la POST request. Potete vedere che ci sono 3 parametri: username, password e Login che è l'azione che viene eseguita.
  
-•	Aprite un terminale sulla macchina Kali e digitate il seguente comando
+Aprite un terminale sulla macchina Kali e digitate il seguente comando
+
 hydra -V -l admin -P /usr/share/john/password.lst <INDIRIZZO IP METASPLOITABLE2) http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login Failed"
 
                    dove 
-	L’opzione -V indica la modalità verbose dove ogni password provata verrà stampata a video
-	-l indica lo username di cui recuperare la password
-	-P indica il dizionario da utilizzare per recuperare la password
-	 indica l’indirizzo IP del target da attaccare in questo caso la macchina Metasploitable2
-	http-post-form indica che l’applicazione accetta richieste POST
-	l’ultimo parametro indica l’URL della pagina di login e i parametri passati alla pagina di login che avevamo intercettato con Burp Suite
+* L’opzione -V indica la modalità verbose dove ogni password provata verrà stampata a video
+* -l indica lo username di cui recuperare la password
+* -P indica il dizionario da utilizzare per recuperare la password
+* indica l’indirizzo IP del target da attaccare in questo caso la macchina Metasploitable2
+* http-post-form indica che l’applicazione accetta richieste POST
+* l’ultimo parametro indica l’URL della pagina di login e i parametri passati alla pagina di login che avevamo intercettato con Burp Suite
 
-•	Ora proviamo a recuperare la password  dell’account istheory necessaria per accedere alla seguente wiki disponibile online: https://is.theorizeit.org. Visitate la pagina https://is.theorizeit.org/auth. Vedete che richiede uno username e una password. 
-•	Per fare questo utilizzeremo il dizionario rockyou.txt che si trova sotto la cartella /usr/share/wordlists che contiene circa 32 milioni di password
-•	Dobbiamo innanzitutto decomprimere rockyou digitando dal terminale della macchina Kali Linux i seguenti comandi: 
-	cd /usr/share/wordlists
-	sudo gunzip /usr/share/wordlists/rockyou.txt.gz
 
-•	Sempre dallo stesso terminale digitate il seguente comando per trovare la password associata all’account istheory
+# Attacchi online con Metasploit
 
-hydra -V -l istheory -P /usr/share/wordlists/rockyou.txt https-get://is.theorizeit.org/auth/
+•Dobbiamo recuperare la password degli account root,  admin e user utilizzati per collegarsi alla applicazione myPhPAdmin sulla macchina Metasploitable2.
 
-Online Dictionary Attacks with Metasploit
+Creaiamo il file /tmp/users.txt gli utenti di cui recuperare la password e il file /tmp/passwords.txt.
 
-•	Dobbiamo recuperare la password degli account root,  admin e user utilizzati per collegarsi alla applicazione myPhPAdmin sulla macchina Metasploitable2.
 
-•	Creaiamo il file /tmp/users.txt gli utenti di cui recuperare la password e il file /tmp/passwords.txt 
+Facciamo partire la console di Metasploit  con il comando msfconsole e poi cerchiamo il modulo di Metasploit che implementa un online dictionary attack verso l’applicazione myPhPAdmin: 
 
+Selezioniamo l’opzione 1 e specifichiamo i vari parametri:
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-•	Facciamo partire la console di Metasploit  con il comando msfconsole e poi cerchiamo il modulo di Metasploit che implementa un online dictionary attack verso l’applicazione myPhPAdmin:
-
- 
-
-•	Selezioniamo l’opzione 1 e specifichiamo i vari parametri:
- 
-•	Dopo pochi secondi otterremo le password desiderate:
+Dopo pochi secondi otterremo le password desiderate:
 ![image](https://github.com/cybersecurityactivitiesunivr/cybersecurityunivr/assets/173290227/555a81fd-e345-4008-9bbb-63ce1164eef9)
 
