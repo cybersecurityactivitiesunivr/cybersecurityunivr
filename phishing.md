@@ -187,9 +187,11 @@ Nel campo Redirect To specificate l’indirizzo del sito legittimo che e' stato 
 
 Cliccate su Save Page
 
+![image](gophish5.png)
+
 ### Creare template email di phishing 
 
-![image](gophish5.png)
+![image](gophish6.png)
 
 Cliccate su Email Templates per creare il template dell’email di phishing
 
@@ -203,7 +205,7 @@ Cliccate su Save Template
 
 ### Creare la lista delle potenziali vittime
 
-![image](gophish6.png)
+
 
 Cliccate su Users and Groups per definire la lista delle vittime a cui mandare l’email di phishing. Le singole vittime possono essere specificate singolarmente e aggiunte mediante il bottone Add oppure è possibile importare un file .cvs con la lista delle vittime
 
