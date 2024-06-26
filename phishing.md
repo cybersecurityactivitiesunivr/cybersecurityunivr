@@ -78,9 +78,12 @@ Selezionare Opzione 13 – Adobe PDF Embedded Social Engineering
 ![image](usb1.png)
 
 Selezionare Opzione 2 – Use built-in BLANK PDF for attack
+
 Selezionare opzione 5 – Windows Meterpreter Reverse_TCP (x64)
+
 Lasciare come indirizzo IP e porta di default
+
 Copiare la cartella /root/.set/autorun su una chiavetta USB
 
-![image](usb2.png)
+![image](usb3.png)
   
