@@ -92,3 +92,13 @@ Copiare la cartella /root/.set/autorun su una chiavetta USB
 Selezionare Opzione 8) QRCode Generator Attack Vector 
 
 ![image](qrcode1.png)
+
+Specificare l'url del sito web di phishing a cui redirigere le potenziali vittime 
+
+![image](qrcode2.png)
+
+Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
+
+
+
+
