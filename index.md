@@ -7,8 +7,6 @@ Le tecniche che utilizzerete durante i laboratori sono sfruttamento di vulnerabi
 imparerete ad effettuare l'analisi del rischio giocando a carte, e applicherete le tecniche principali per anonimizzare i dati.
 
 * [Sfruttamento di vulnerabilita'](./vulnerability.md)
-  
-* [Tecniche di post-exploitation](./post-exploitation.md)
 
 * [Attacchi ai sistemi di autenticazione basati su password](./password.md)
 
