@@ -8,7 +8,7 @@ imparerete ad effettuare l'analisi del rischio giocando a carte, e applicherete 
 
 * [Sfruttamento di vulnerabilita'](./vulnerability.md)
   
-* [Tecniche di post-exploitation'](./post-exploitation.md)
+* [Tecniche di post-exploitation](./post-exploitation.md)
 
 * [Attacchi ai sistemi di autenticazione basati su password](./password.md)
 
