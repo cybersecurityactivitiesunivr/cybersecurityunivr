@@ -10,11 +10,9 @@ L'ingegneria sociale è una tecnica di manipolazione psicologica utilizzata per 
 Per questa attivita' utilizzeremo la macchina **Kali Linux** e il **Social Engineering Tookit (SET)** installato sulla macchina Kali Linux. 
 SET  offre una vasta gamma di funzionalità per simulare attacchi di ingegneria sociale e valutare la resilienza di individui e organizzazioni contro tali attacchi. 
 
-Prima di condurre gli attacchi di ingegneria sociale utilizzando SET dobbiamo installare sulla macchina Kali Linux, due software **Mailhog** e **GoPhish**.
+Prima di condurre gli attacchi di ingegneria sociale utilizzando SET dobbiamo installare sulla macchina Kali Linux il software **Mailhog**.
 
 **Mailhog** è uno strumento di testing e sviluppo per le email. È un server SMTP simulato che cattura le email inviate dalle applicazioni in fase di sviluppo, consentendo agli sviluppatori di testare l'invio di email senza il rischio di inviare email reali a destinatari reali. MailHog fornisce un'interfaccia web semplice per visualizzare, cercare e gestire le email catturate.
-
-**GoPhish** è uno strumento open source per la gestione e l'esecuzione di campagne di phishing simulato. È progettato per aiutare le organizzazioni a testare e migliorare la consapevolezza sulla sicurezza dei propri dipendenti. Con GoPhish, le organizzazioni possono creare e gestire campagne di phishing realistiche, monitorare le risposte dei destinatari e analizzare i risultati per identificare le aree in cui è necessario migliorare la formazione sulla sicurezza.
 
 ## Installazione Mailhog
 
@@ -27,14 +25,8 @@ Aprite un terminale e digitate i seguenti comandi per dare permessi di esecuzion
 ```
 # chmod +x MailHog_linux_amd64
 ```
-## Installazione GoPhish
 
-Scaricate sulla macchina Kali Linux il file gophish-v0.12.1-linux-64bit.zip dal seguente url https://github.com/gophish/gophish/releases.
 
-Estraete il file zip in una cartella sotto la cartella Desktop e rendetelo eseguibile con il comando:
-```
-# chmod +x gophish
-```
 ## Creare un sito di phishing per rubare credenziali
 
 
@@ -112,91 +104,3 @@ Specificare l'url del sito web di phishing a cui redirigere le potenziali vittim
 Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
 
-
-## Simulare una campagna di phishing con GoPhish
-
-Aprite un terminale e digitate il comando ./gophish per far partire GoPhish
-
-Aprite un secondo terminale e digitate il comando ./MailHog_linux_amd64
- 
-Aprite Firefox e digitate nella barra degli indirizzi https://127.0.0.1:3333
-
-
-Fate il login con  utente: admin  e password: quella che e' stata generata.
-
-![image](gophish2.png)
-
-
-## Creare un Sending Profile
-
-![image](gophish3.png)
-
-Specificate un nome per il Sending Profile
-
-Specificate un indirizzo fasullo del mittente
-
-Specificate come host l'SMTP server di MailHog indicato nella figura
-
-Lasciate username e password in bianco
-
-Cliccate su Save Profile
-
-### Creazione Landing Page
-
-![image](gophish4.png)
-
-Creiamo una Landing Page ovvero il sito di phishing
-
-Specificare URL alla pagina di login del sito da clonare e cliccate Import
-
-Flaggate  l’opzione Capture Submitted Data
-
-Nel campo Redirect To specificate l’indirizzo del sito legittimo che e' stato clonato
-
-Cliccate su Save Page
-
-![image](gophish5.png)
-
-### Creare template email di phishing 
-
-![image](gophish7.png)
-
-Cliccate su Email Templates per creare il template dell’email di phishing
-
-Date un Nome al Template
-
-Cliccate su Import Email e Copiate il sorgente dell’email di phishing che volete utilizzare un'email esistente
-
-Cliccate su Import una volta terminato di copiare il codice sorgente dell’email
- 
-Cliccate su Save Template
-
-### Creare la lista delle potenziali vittime
-
-![image](gophish8.png)
-
-Cliccate su Users and Groups per definire la lista delle vittime a cui mandare l’email di phishing. Le singole vittime possono essere specificate singolarmente e aggiunte mediante il bottone Add oppure è possibile importare un file .cvs con la lista delle vittime
-
-Cliccate su Save Changes
-
-### Creare una nuova campagna di phishing 
-
-Create una nuova campagna di phishing cliccando su Campaigns e specificate sotto Email Template, Landing Page, Sending Profile e Groups il nome di quelli che abbiamo creato nei passaggi precedenti.
-
-![image](gophish9.png)
-
-Dopo di che cliccate su Launch Campaign.
-
-![image](gophish10.png)
-
-L’email di spearphishing è stata inviata come si può vedere dalla Dashboard di GoPhish
- 
-Potete visualizzare l’email inviata dall’interfaccia grafica di MailHog sulla macchina Kali Linux all'indirizzo http://0.0.0.0:8025
-
-![image](gophish11.png)
- 
-Cliccate su Change Password nell’email e inserite le credenziali nella pagina di phishing che copia la pagina di login di Netflix
-
-Aprite la dashboard di GoPhish e visualizzate i dati sottomessi dalla vittima
-
-![image](gophish12.png)
