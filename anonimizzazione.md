@@ -16,4 +16,4 @@ Lo strumento fornisce una piattaforma flessibile che supporta un'ampia gamma di 
 
 È utilizzato in vari settori, come la sanità, le ricerche di mercato e i servizi pubblici, per garantire la privacy dei dati durante la condivisione e l'analisi.
 
-Prima di iniziare il laboratorio, Amnesia e ARX devono essere installati sulla macchina **Kali Linux** e i seguenti file devono essere salvati ed estratti sotto la cartella Desktop: [Databases](Databases.zip), [Hierarchies](IcdCodesPredefinedHierarchies.zip), [Project](example.deid).
+Prima di iniziare il laboratorio, Amnesia e ARX devono essere installati sulla macchina **Kali Linux** e i seguenti file devono essere salvati ed estratti sotto la cartella Desktop: [Databases](Datasets.zip), [Hierarchies](IcdCodesPredefinedHierarchies.zip), [Project](example.deid).
