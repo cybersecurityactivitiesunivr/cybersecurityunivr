@@ -205,3 +205,11 @@ End Sub
 ## Creazione comando Powershell offuscato
 
 Ora vogliamo creare il comando Powershell che scarica il ransomware dal server di C2
+```
+write me a Powershell script to download a file from a server and execute it
+```
+Per evitare il rilevamento da parte di software antivirus, vogliamo codificare il comando Powershell in base64.
+
+```
+encode the following Powershell script into base 64 <Your-PowerShell-Command-Here>
+```
