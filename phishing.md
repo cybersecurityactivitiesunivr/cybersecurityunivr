@@ -217,7 +217,13 @@ Adesso dobbiamo creare il codice del ransomware. Chiediamo a ChatGPT di creare u
 ```
 write me a function to encrypt files in Go programming language 
 ```
-Decidiamo di voler implementare la tecnica a cifratura intermittente
+Vogliamo  implementare la tecnica a cifratura intermittente
 ```
 write a code that encrypts only the first K bytes of a file in Go programming language
 ```
+Vogliamo implementare anche la tecnica di doppia estorsione e quindi dobbiamo avere una funzione che manda file al server C2 prima di iniziare il processo di cifratura.
+
+```
+write a function in Go programming language that sends files with a given extension to a server
+```
+
