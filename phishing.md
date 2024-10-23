@@ -134,12 +134,12 @@ pdf-parser.py -o <object_number> template.pdf
 Per decodificare un oggetto utilizziamo il seguente comando:
 
 ```
-pdf-parser.py -o <object_number> -f badpdf.pdf
+pdf-parser.py -o <object_number> -f template.pdf
 ```
 Per identificare e estrarre gli oggetti JavaScript utilizziamo il seguente comando:
 
 ```
-pdf-parser --object <object_number> -f -w -d objNUM.js badpdf.pdf
+pdf-parser --object <object_number> -f -w -d objNUM.js template.pdf
 ```
 Analizza il JavaScript per identificare comportamenti dannosi, come il download di payload aggiuntivi o l'esecuzione di codice arbitrario.
 
