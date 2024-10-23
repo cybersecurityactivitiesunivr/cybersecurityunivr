@@ -120,6 +120,7 @@ Utilizziamo ora  **pdfid** per identificare gli oggetti presenti nel PDF. Questo
 In particolare, cerchiamo nell'output parole chiave che possono ricondurre a comportamenti sospetti come /JavaScript, /OpenAction, /AA, /EmbededFile, /Launch, /Name, /URI ecc.
 
 Ora utilizziamo **pdf-parser** per esaminare più in dettaglio i contenuti del PDF, specialmente gli oggetti sospetti identificati con pdfid.
+
 ```
 pdf-parser.py -a template.pdf
 ```
@@ -129,11 +130,14 @@ Esamina gli oggetti uno per uno, prestando particolare attenzione agli oggetti c
 ```
 pdf-parser.py -o <object_number> template.pdf
 ```
-Per decodificare un oggetto e' possibile utilizzare il seguente comando:
+
+Per decodificare un oggetto utilizziamo il seguente comando:
+
 ```
 pdf-parser.py -o <object_number> -f badpdf.pdf
 ```
-Per identificare e estrarre gli oggetti JavaScript e' possibile utilizzare il seguente comando:
+Per identificare e estrarre gli oggetti JavaScript utilizziamo il seguente comando:
+
 ```
 pdf-parser --object <object_number> -f -w -d objNUM.js badpdf.pdf
 ```
