@@ -3,7 +3,7 @@ layout: default
 title: Attacchi di Ingegneria sociale
 description: Prof.ssa Federica Paci
 ---
-# Attacchi di Ingegneria Sociale
+# Attacchi di Ingegneria Sociale con Social Engineering Toolkit (SET) 
 
 L'ingegneria sociale è una tecnica di manipolazione psicologica utilizzata per indurre le persone a divulgare informazioni confidenziali, eseguire azioni che compromettano la sicurezza o rivelare dati sensibili. Questa tecnica si basa sull'interazione umana e sfrutta la fiducia, la curiosità, la paura o l'ignoranza delle vittime per ottenere accesso a informazioni o sistemi protetti.
 
@@ -88,8 +88,11 @@ Selezionare opzione 5 – Windows Meterpreter Reverse_TCP (x64)
 
 Lasciare come indirizzo IP e porta di default
 
-Copiare la cartella /root/.set/autorun su una chiavetta USB
-
+Esaminiamo il contenuto della cartella /root/.set/autorun. Copiamola sotto la cartella Desktop con il seguente comando
+```
+# sudo cp -R /root/.set/autorun ~/Desktop 
+```
+Per completare l'attacco bisogna copiare il contenuto della cartella /root/.set/autorun su una chiavetta USB.
 
 ## Creare un QRCode Malevolo 
 
@@ -103,4 +106,6 @@ Specificare l'url del sito web di phishing a cui redirigere le potenziali vittim
 
 Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
+
+# Sfruttare gli LLMs per condurre attacchi di ingegneria sociale
 
