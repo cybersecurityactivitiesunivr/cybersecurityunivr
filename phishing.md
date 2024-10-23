@@ -226,4 +226,8 @@ Vogliamo implementare anche la tecnica di doppia estorsione e quindi dobbiamo av
 ```
 write a function in Go programming language that sends files with a given extension to a server
 ```
+## Creazione server C2
+```
+write a server that accepts POST requests from a client that uploads files and GET requests to download a file.
+```
 
