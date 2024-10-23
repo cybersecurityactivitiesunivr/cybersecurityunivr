@@ -10,23 +10,6 @@ L'ingegneria sociale è una tecnica di manipolazione psicologica utilizzata per 
 Per questa attivita' utilizzeremo la macchina **Kali Linux** e il **Social Engineering Tookit (SET)** installato sulla macchina Kali Linux. 
 SET  offre una vasta gamma di funzionalità per simulare attacchi di ingegneria sociale e valutare la resilienza di individui e organizzazioni contro tali attacchi. 
 
-Prima di condurre gli attacchi di ingegneria sociale utilizzando SET dobbiamo installare sulla macchina Kali Linux il software **Mailhog**.
-
-**Mailhog** è uno strumento di testing e sviluppo per le email. È un server SMTP simulato che cattura le email inviate dalle applicazioni in fase di sviluppo, consentendo agli sviluppatori di testare l'invio di email senza il rischio di inviare email reali a destinatari reali. MailHog fornisce un'interfaccia web semplice per visualizzare, cercare e gestire le email catturate.
-
-## Installazione Mailhog
-
-Scaricate sulla macchina Kali Linux il file MailHog_linux_amd64 dal seguente url https://github.com/mailhog/MailHog/releases/v1.0.0.
-
-Salvate il file MailHog_linux_amd64 sotto la cartella Desktop.
-
-Aprite un terminale e digitate i seguenti comandi per dare permessi di esecuzione al file:
-
-```
-# chmod +x MailHog_linux_amd64
-```
-
-
 ## Creare un sito di phishing per rubare credenziali
 
 
