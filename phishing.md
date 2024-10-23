@@ -160,3 +160,14 @@ Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che 
 
 # Sfruttare gli LLMs per condurre attacchi di ingegneria sociale
 
+I Large Language Models (LLM), come GPT, vengono utilizzati per condurre attacchi di ingegneria sociale grazie alla loro capacità di generare testi coerenti, credibili e personalizzati. Gli attaccanti sfruttano gli LLM per automatizzare e perfezionare tecniche come phishing, spear-phishing e altre forme di manipolazione, rendendo le truffe più sofisticate e difficili da individuare. Ecco come avviene:
+
+**Messaggi realistici e personalizzati**: Gli LLM possono analizzare grandi quantità di dati disponibili pubblicamente (come post sui social media o e-mail trapelate) per creare messaggi altamente mirati e personalizzati. Gli attacchi di spear-phishing, ad esempio, possono essere adattati a una vittima specifica utilizzando dettagli come il suo nome, il ruolo lavorativo e i suoi interessi. Questo aumenta la probabilità che il bersaglio creda che il messaggio provenga da una fonte legittima.
+
+**Automazione e scalabilità**: Gli LLM permettono agli attaccanti di generare automaticamente migliaia di varianti di e-mail o messaggi di ingegneria sociale, eliminando errori grammaticali e di stile tipici degli attacchi manuali. Questa automazione consente agli aggressori di condurre attacchi su larga scala con maggiore precisione.
+
+**Imitazione di conversazioni**: Un LLM può essere utilizzato per sostenere conversazioni realistiche in tempo reale, imitando il linguaggio e il tono di colleghi, amici o figure autorevoli. Questo rende più difficile per la vittima riconoscere l'inganno, soprattutto in contesti professionali o quando vengono richieste informazioni sensibili.
+
+**Deepfakes testuali e vocali**: Oltre a generare testo, gli LLM possono essere combinati con tecnologie di sintesi vocale per creare deepfakes vocali. Gli aggressori possono simulare telefonate o messaggi vocali da parte di dirigenti aziendali, convincendo così i dipendenti a condividere informazioni sensibili o trasferire fondi.
+
+In sintesi, gli LLM amplificano la capacità degli attacchi di ingegneria sociale grazie alla loro abilità di creare contenuti persuasivi e su misura, rendendo questi attacchi più efficaci, scalabili e difficili da rilevare.
