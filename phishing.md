@@ -215,7 +215,7 @@ encode the following Powershell script into base 64 <Your-PowerShell-Command-Her
 
 Adesso dobbiamo creare il codice del ransomware. Chiediamo a ChatGPT di creare una funzione per cifrare i file con l'algoritmo AES
 ```
-write me a function to encrypt files in G programming language 
+write me a function to encrypt files in Go programming language 
 ```
 Decidiamo di voler implementare la tecnica a cifratura intermittente
 ```
