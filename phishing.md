@@ -109,7 +109,7 @@ BT
 ET
 endstream
 endobj
-``
+```
 Utilizziamo ora  **pdfid** per identificare gli oggetti presenti nel PDF. Questo strumento aiuta a rilevare elementi sospetti come JavaScript, oggetti embed, e altro.
 
 ```
