@@ -99,6 +99,8 @@ La cartella contiene un file autorun.inf e template.pdf. Esaminiamo il file auto
 ```
 Esaminiamo ora il file pdf utilizzando pdfid e pdf-parser due tool per l'analisi di documenti pdf malevoli che tipicamente vengono utilizzati negli attacchi di phishing. 
 
+
+
 Per completare l'attacco bisogna copiare il contenuto della cartella /root/.set/autorun su una chiavetta USB.
 
 ## Creare un QRCode Malevolo 
