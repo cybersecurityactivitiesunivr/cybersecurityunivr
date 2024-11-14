@@ -98,7 +98,7 @@ unshadow passwd.txt shadow.txt > passwords.txt
 ```
 Adesso eseguiamo una serie di attacchi a dizionario con i dizionari che si trovano nel file password.zip: cain.txt, facebook-pastebay.txt  hotmail.txt, e myspace.txt. Digitate il seguente comando:
 ```
-john –wordlist=< path al dizionario > passwords.txt
+john –-wordlist=< path al dizionario  passwords.txt
 ```
 _Quali passwords siete riusciti a recuperare?_
  
