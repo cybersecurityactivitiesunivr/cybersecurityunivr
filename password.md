@@ -5,8 +5,6 @@ description: Prof.ssa Federica Paci
 ---
 In questo laboratorio utilizzeremo la macchina virtuale **Kali Linux** e la macchina virtuale **Metasploitable2**. Le due macchine virtuali devono essere collegate da una rete interna.
 
-Prima di iniziare il laboratorio il seguente file deve essere scaricato [File](password.zip) sulla macchina Kali Linux ed estratto nella cartella Desktop. 
-
 # Attacchi offline
 Gli attacchi offline vengono eseguiti senza interagire direttamente con il sistema di autenticazione, ma lavorando invece su dati acquisiti, come il file delle password che contiene gli hash delle password. 
 
@@ -16,7 +14,7 @@ In un attacco a dizionario, l'attaccante utilizza un elenco predefinito di passw
 
 Eseguiremo un dictionary attack per scoprire la password del documento **confidential.pdf**.  L’hash della password che protegge l’accesso al documento è memorizzato nei metadati del documento. Per estrarre l’hash della password usiamo il tool **pdf2john.pl** di John The Ripper.
 
-Aprite un terminale digitate i seguenti comandi
+Sulla macchina Kali Linux, aprite un terminale e digitate i seguenti comandi
 ```
 # cd <path alla cartella dove avete scompattato il password.zip>
 # pdf2john confidential.pdf
@@ -53,6 +51,8 @@ hashcat -m 0 -a 0 hashes.txt  dictionary.txt
 ```
 * -m 0 indica la tipologia dell’hash MD5
   
+_Quali passwords siete riusciti a recuperare?_
+
 Per consentire di recuperare le altre password, eseguiremo un dictionary attack dove alle parole del dizionario applicheremo delle regole supportate da hashcat per rappresentare  patterns utilizzati dagli utenti nel formulare le loro passwords.
 
 Utilizzeremo la regola _leapspeak.rule_ che si trova sotto la cartella _/usr/share/hashcat/rules/leetspeak.rule_. Questa regola va a sostituire le lettere che compongono le parole nel dizionario con simboli o numeri. Per esempio la parola password applicando questa regola può diventare “p455w0rd”, “p@5sw0rd”, “passw0rd”.
@@ -61,6 +61,9 @@ Per applicare la regola alle parole contenute nel dizionario dictionary.txt eseg
 ```
 hashcat -m 0 -a 0 -r /usr/share/hashcat/rules/leetspeak.rule hashes.txt  dictionary.txt
 ```
+
+_Quali passwords siete riusciti a recuperare?_
+
 Per consentire di recuperare le altre password, eseguiremo un attacco a dizionario applicando una maschera che rappresenta il pattern dove l’utente aggiunge dei numeri alla fine della password quali per esempio john22 o john2022.
 
 Per applicare la maschera alle parole contenute nel dizionario dictionary.txt eseguiamo il seguente comando:
@@ -87,7 +90,7 @@ Ripetete l'attacco a dizionario utilizzando i dizionari che si trovano nel file 
 
 ## Attacco a dizionario - Craccare le password di Metasploitable2
 
-Eseguiremo una serie di attacchi a dizionario per scoprire le password presenti nei file passwd e shadow  che contengono gli username e gli hash delle password degli utenti che hanno accesso alla macchina Metasploitable2. 
+Eseguiremo una serie di attacchi a dizionario per scoprire le password presenti nei file passwd e shadow che contengono gli username e gli hash delle password degli utenti che hanno accesso alla macchina Metasploitable2. 
 
 Da terminale digitate il seguente comando per combinare i due file passwd e shadow in un unico file passwords.txt.
 ```
@@ -97,7 +100,7 @@ Adesso eseguiamo una serie di attacchi a dizionario con i dizionari che si trova
 ```
 john –wordlist=< path al dizionario > passwords.txt
 ```
-_Quali password siete riusciti a recuperare?_
+_Quali passwords siete riusciti a recuperare?_
  
 
 # Attacchi online con Hydra 
