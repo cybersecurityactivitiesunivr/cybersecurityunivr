@@ -17,6 +17,8 @@ Anche le piattaforme di social media utilizzano tecnologie di tracciamento integ
 
 Queste tecnologie di tracciamento sono in contrasto con i principi fondamentali del GDPR, come il consenso esplicito, la trasparenza, la minimizzazione dei dati e la limitazione delle finalità. 
 
+Questo progetto analizzera' 15 siti americani e 15 siti web europeri per determinare quali tecnologie di tracciamento adottano. Le tecnologie di tracciamento utilizzate devono essere analizzate in 3 diversi scenari: quando l'utente non fa nessuna scelta sull'essere tracciato, quando nega il consenso ad essere tracciato e quando autorizza il consenso ad essere tracciato. Per effettuare l'analisi verra' utilizzato il Website Auditing Tool di EDPB. Il tool e' scaricabile dal seguente link: https://code.europa.eu/edpb/website-auditing-tool/-/releases.
+
 
 
 
