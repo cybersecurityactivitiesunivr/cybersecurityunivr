@@ -22,4 +22,10 @@ Questo progetto si focalizza sull'analisi delle tecnologie di tracciamento adott
 
 ## Phishing - Creazione di Allegato Word Malevolo
 
+L'obiettivo di questo progetto è quello di realizzare un documento Word malevolo che contiene una macro VBA, che installa un information stealer che ruba file contenenti informazioni sensitive dalla macchina delle vittime. La macro si connette a Dropbox e scarica un'immagine in cui e' stato codificato l'indirizzo IP del server C2 da cui scaricare l'information stealer. Il codice della macro deve essere offuscato. 
+
+Il report per presentare l'implementazione del documento malevolo deve seguire il template scaricabile cliccando qui https://univr-my.sharepoint.com/:w:/g/personal/federicamariafrancesca_paci_univr_it/EcjHPLYJVj9Mpl0SS0GXo0AB1ZU10qOFOTcHSjOimGvA2A?e=lPvMtB.
+
+Durante l'esame orale gli studenti dovranno dimostrare che il documento malevolo scarica il malware su una macchina Windows. Per la dimostrazione verranno utilizzate due macchine virtuali: una macchina che simula la macchina dell'attaccante dove e' ospitato il server C2 e una macchina Windows che è il target dell'attacco.
+
 ## Sfruttamento Vulnerabilita' Shellshock
