@@ -48,6 +48,9 @@ Un attaccante può utilizzare questa vulnerabilità per eseguire comandi arbitra
 
 **Stage 5** L'attaccante esegue curl su **Host 1** per inviare alla macchina dell'attaccante il file **sensitive_data**.
 
+Il report del progetto deve avere una sottosezione per ogni stage dell'attacco dove viene spiegato come la fase dell'attacco e' stata eseguita e come sono configurate le macchine dell'attaccante, **Host 1** e **Host 2**.
+
+Durante l'esame orale gli studenti dovranno dimostrare le fasi dell'attacco. Per la dimostrazione verranno utilizzate tre macchine virtuali: una macchina Linux che simula la macchina dell'attaccante, la macchina **Host 1** vulnerabile a Shellshock (https://www.vulnhub.com/entry/pentester-lab-cve-2014-6271-shellshock,104/) e la macchina **Host 2** Metasploitable2 (https://sourceforge.net/projects/metasploitable/).
 
 
 
