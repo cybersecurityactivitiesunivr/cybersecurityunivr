@@ -32,3 +32,22 @@ Durante l'esame orale gli studenti dovranno dimostrare che il documento malevolo
 
 ## Sfruttamento Vulnerabilita' Shellshock
 
+L'obiettivo di questo progetto e' quello di condurre un attacco multi-stage sfruttando la vulnerabilita' Shellshock. La vulnerabilità Shellshock (o Bashdoor) è un grave problema di sicurezza scoperto nel 2014 che affliggeva il software Bash (Bourne Again Shell), una shell di comando molto diffusa in sistemi operativi basati su Unix, come Linux e macOS. 
+
+Shellshock sfrutta una debolezza nel modo in cui Bash gestisce le variabili d'ambiente. In Bash, le variabili d'ambiente possono contenere funzioni (frammenti di codice), e la vulnerabilità permette l'esecuzione di codice arbitrario iniettato attraverso variabili d'ambiente appositamente create.
+
+Un attaccante può utilizzare questa vulnerabilità per eseguire comandi arbitrari sul sistema vittima, ottenendo potenzialmente il controllo completo del sistema.
+
+**Stage 1**: L'attaccante sfrutta la vulnerabilita' Shellshock per accedere ad macchina Linux vulnerabile (**Host 1**). 
+
+**Stage 2**:  L'attaccante cerca altri host raggiungibili e trova una seconda macchina (**Host 2**) a cui accede sfruttando una vulnerabilita' presente nella macchina e.g ssh.
+
+**Stage 3**: L'attaccante fa una copia dei file /etc/passwd e /etc/shadow presenti su **Host 2**  e li comprime in un file .tar chiamato **sensitive_data**.
+
+**Stage 4** L'attaccante esegue il comando scp su **Host 1** per scaricare **sensitive_data** da **Host 2**
+
+**Stage 5** L'attaccante esegue curl su **Host 1** per inviare alla macchina dell'attaccante il file **sensitive_data**.
+
+
+
+
