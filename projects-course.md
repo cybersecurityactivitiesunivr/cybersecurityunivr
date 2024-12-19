@@ -32,7 +32,7 @@ Durante l'esame orale gli studenti dovranno dimostrare che il documento malevolo
 
 ## Sfruttamento Vulnerabilita' Shellshock
 
-L'obiettivo di questo progetto e' quello di condurre un attacco multi-stage sfruttando la vulnerabilita' Shellshock. La vulnerabilità Shellshock (o Bashdoor) è un grave problema di sicurezza scoperto nel 2014 che affliggeva il software Bash (Bourne Again Shell), una shell di comando molto diffusa in sistemi operativi basati su Unix, come Linux e macOS. 
+L'obiettivo di questo progetto e' quello di condurre un attacco multi-stage sfruttando la vulnerabilita' Shellshock (CVE-2014-6271). La vulnerabilità Shellshock (o Bashdoor) è un grave problema di sicurezza scoperto nel 2014 che affliggeva il software Bash (Bourne Again Shell), una shell di comando molto diffusa in sistemi operativi basati su Unix, come Linux e macOS. 
 
 Shellshock sfrutta una debolezza nel modo in cui Bash gestisce le variabili d'ambiente. In Bash, le variabili d'ambiente possono contenere funzioni (frammenti di codice), e la vulnerabilità permette l'esecuzione di codice arbitrario iniettato attraverso variabili d'ambiente appositamente create.
 
