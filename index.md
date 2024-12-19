@@ -13,7 +13,7 @@ Questa pagina e' dedicata ai laboratori e i progetti d'esame del corso di Cyber 
 
 * [Tecniche di anonimizzazione dei dati](./anonimizzazione.md)
 
-* [Progetti d'esame](./project-course.md)
+* [Progetti d'esame](./projects-course.md)
 
 
 
