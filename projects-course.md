@@ -22,7 +22,7 @@ Questo progetto si focalizza sull'analisi delle tecnologie di tracciamento adott
 
 Per sostenere l'esami gli studenti devono consegnare:
 * una cartella per ogni sito analizzato contenente 3 file contenenti i dati raccolti relativi ai cookies,browser fingerprinting, local storage  beacons per le tre condizioni nessuna scelta, consenso negato e consenso accettato. Guardate la cartella a questo link come esempio di cartella da consegnare:https://univr-my.sharepoint.com/:f:/g/personal/federicamariafrancesca_paci_univr_it/Eg0A__4wIQBGj2fgEDjlgCgBgHO7drQJ3F_nHx_HtBcP-Q?e=XZTzJz
-* il report del progetto dovra' confrontare le principali tecnologie di tracciamento adottate nelle tre condizioni **nessuna scelta**, **consenso negato**, e **consenso accettato** dai siti americani e quelli europei. Il template che potete scaricare da questo link https://univr-my.sharepoint.com/:w:/g/personal/federicamariafrancesca_paci_univr_it/EXj8DVOHzbpGlYpDZM09ICABVXxMyneRQq84m1e-jD0ARw?e=TYGfbD descrive come analizzare i dati raccolti e presentare i risultati. 
+* il report del progetto dovra' confrontare le principali tecnologie di tracciamento adottate nelle tre condizioni **nessuna scelta**, **consenso negato**, e **consenso accettato** dai siti americani e quelli europei. Il template che potete scaricare da questo link https://univr-my.sharepoint.com/:w:/g/personal/federicamariafrancesca_paci_univr_it/EXj8DVOHzbpGlYpDZM09ICABVXxMyneRQq84m1e-jD0ARw?e=TYGfbD descrive come analizzare i dati raccolti e presentare i risultati. I risultati riportati nelle tabelle e figure vanno commentati e discussi.
 
 ## Phishing - Creazione di Allegato Word Malevolo
 
