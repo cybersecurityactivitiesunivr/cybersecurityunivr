@@ -51,6 +51,17 @@ Specificare l'url del sito web di phishing a cui redirigere le potenziali vittim
 
 Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
+## Creare un QRCode Malevolo 
+
+Selezionare Opzione 8) QRCode Generator Attack Vector 
+
+![image](qrcode1.png)
+
+Specificare l'url del sito web di phishing a cui redirigere le potenziali vittime 
+
+![image](qrcode2.png)
+
+Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
 ## Creare un eseguibile malevolo per Metasploitable 2
 
@@ -168,18 +179,6 @@ pdf-parser --object <object_number> -f -w -d objNUM.js template.pdf
 Analizza il JavaScript per identificare comportamenti dannosi, come il download di payload aggiuntivi o l'esecuzione di codice arbitrario.
 
 Per completare l'attacco bisogna copiare il contenuto della cartella /root/.set/autorun su una chiavetta USB.
-
-## Creare un QRCode Malevolo 
-
-Selezionare Opzione 8) QRCode Generator Attack Vector 
-
-![image](qrcode1.png)
-
-Specificare l'url del sito web di phishing a cui redirigere le potenziali vittime 
-
-![image](qrcode2.png)
-
-Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
 
 # Sfruttare gli LLMs per condurre attacchi di ingegneria sociale
