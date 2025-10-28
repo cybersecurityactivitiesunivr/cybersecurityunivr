@@ -93,8 +93,6 @@ Poi digitare i seguenti comandi per dare i permessi di esecuzione ed eseguire il
 chmod +x LegitProgram.1
 ./LegitProgram.1
 ```
-<img width="468" height="636" alt="image" src="https://github.com/user-attachments/assets/7bc25eb5-62af-45ca-a984-1f3198b80e91" />
-
 
 ## Creare Chiavetta USB infetta 
 
