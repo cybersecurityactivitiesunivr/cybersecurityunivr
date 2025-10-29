@@ -51,17 +51,6 @@ Specificare l'url del sito web di phishing a cui redirigere le potenziali vittim
 
 Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
-## Creare un QRCode Malevolo 
-
-Selezionare Opzione 8) QRCode Generator Attack Vector 
-
-![image](qrcode1.png)
-
-Specificare l'url del sito web di phishing a cui redirigere le potenziali vittime 
-
-![image](qrcode2.png)
-
-Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
 ## Creare Chiavetta USB infetta 
 
@@ -150,13 +139,13 @@ Il comando genera una macro VBA da copiare nel documento Office tramite l'editor
 
 Utilizziamo LibreOffice e creiamo un nuovo documento dove inserire la macro.
 
-Passaggio 1: Crea un nuovo documento
+**Passaggio 1: Crea un nuovo documento**
 
 Apri LibreOffice Writer.
 
 Vai su File → Nuovo → Documento di testo.
 
-Passaggio 2: Apri l’ambiente di sviluppo LibreOffice Basic (IDE)
+**Passaggio 2: Apri l’ambiente di sviluppo LibreOffice Basic (IDE)**
 
 Vai su Strumenti → Macro → Organizza macro → LibreOffice Basic → Modifica.
 
@@ -168,7 +157,7 @@ Clicca su Standard → Nuovo modulo.
 
 Assegnagli un nome (ad esempio, Modulo1).
 
-Passaggio 3: Crea la macro AutoOpen
+**Passaggio 3: Crea la macro AutoOpen**
 
 Nel modulo, scrivi qualcosa come questo:
 
@@ -179,7 +168,7 @@ End Sub
 
 Questa è una semplice macro di test. Puoi sostituire la riga MsgBox con qualsiasi codice desideri venga eseguito all’apertura del documento.
 
-Passaggio 4: Assegna la macro all’apertura del documento
+**Passaggio 4: Assegna la macro all’apertura del documento**
 
 LibreOffice non riconosce automaticamente AutoOpen. Devi assegnarla all’evento Apri documento:
 
@@ -193,7 +182,7 @@ Naviga fino alla tua macro nell’elenco (ad esempio, Standard → Modulo1 → A
 
 Clicca di nuovo su OK per salvare l’assegnazione dell’evento.
 
-Passaggio 5: Salva il documento con macro abilitate
+**Passaggio 5: Salva il documento con macro abilitate**
 
 Vai su File → Salva con nome.
 
@@ -202,7 +191,7 @@ Scegli Documento di testo ODF (.odt).
 
 Clicca su Salva.
 
-Passaggio 6: Testa la macro
+**Passaggio 6: Testa la macro**
 
 Chiudi il documento.
 
@@ -256,7 +245,7 @@ Poi digitare i seguenti comandi per dare i permessi di esecuzione ed eseguire il
 chmod +x LegitProgram.1
 ./LegitProgram.1
 ```
-
+Per completare l'attacco dovete condividere il documento con la vittima e.g usando servizi di cloud storage come Dropbox o Google Drive oppure creare un server C2.
 
 ## Creare un documento PDF malevolo con Metasploit
 
